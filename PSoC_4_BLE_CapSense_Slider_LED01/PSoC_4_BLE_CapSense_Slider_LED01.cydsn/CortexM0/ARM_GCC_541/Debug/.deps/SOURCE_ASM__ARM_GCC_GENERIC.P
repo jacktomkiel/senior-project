@@ -1,0 +1,8 @@
+C:/Users/Jack/Documents/PSoC\ Creator/LED\ capsense\ slider/PSoC_4_BLE_CapSense_Slider_LED01/PSoC_4_BLE_CapSense_Slider_LED01.cydsn/CortexM0/ARM_GCC_541/Debug/CyBootAsmGnu.o : C:/Users/Jack/Documents/PSoC\ Creator/LED\ capsense\ slider/PSoC_4_BLE_CapSense_Slider_LED01/PSoC_4_BLE_CapSense_Slider_LED01.cydsn/Generated_Source/PSoC4/CyBootAsmGnu.s C:/Users/Jack/Documents/PSoC\ Creator/LED\ capsense\ slider/PSoC_4_BLE_CapSense_Slider_LED01/PSoC_4_BLE_CapSense_Slider_LED01.cydsn/Generated_Source/PSoC4/cydevicegnu_trm.inc C:/Users/Jack/Documents/PSoC\ Creator/LED\ capsense\ slider/PSoC_4_BLE_CapSense_Slider_LED01/PSoC_4_BLE_CapSense_Slider_LED01.cydsn/Generated_Source/PSoC4/cyfittergnu.inc 
+
+C:/Users/Jack/Documents/PSoC\ Creator/LED\ capsense\ slider/PSoC_4_BLE_CapSense_Slider_LED01/PSoC_4_BLE_CapSense_Slider_LED01.cydsn/Generated_Source/PSoC4/CyBootAsmGnu.s : 
+
+C:/Users/Jack/Documents/PSoC\ Creator/LED\ capsense\ slider/PSoC_4_BLE_CapSense_Slider_LED01/PSoC_4_BLE_CapSense_Slider_LED01.cydsn/Generated_Source/PSoC4/cydevicegnu_trm.inc : 
+
+C:/Users/Jack/Documents/PSoC\ Creator/LED\ capsense\ slider/PSoC_4_BLE_CapSense_Slider_LED01/PSoC_4_BLE_CapSense_Slider_LED01.cydsn/Generated_Source/PSoC4/cyfittergnu.inc : 
+

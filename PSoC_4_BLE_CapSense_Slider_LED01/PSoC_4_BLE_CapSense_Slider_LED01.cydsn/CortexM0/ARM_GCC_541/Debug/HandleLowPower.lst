@@ -1,0 +1,956 @@
+ARM GAS  C:\Users\Jack\AppData\Local\Temp\cc0tVUsB.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m0
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 6
+  11              		.eabi_attribute 34, 0
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.syntax unified
+  15              		.file	"HandleLowPower.c"
+  16              		.text
+  17              	.Ltext0:
+  18              		.cfi_sections	.debug_frame
+  19              		.section	.text.HandleLowPowerMode,"ax",%progbits
+  20              		.align	2
+  21              		.global	HandleLowPowerMode
+  22              		.code	16
+  23              		.thumb_func
+  24              		.type	HandleLowPowerMode, %function
+  25              	HandleLowPowerMode:
+  26              	.LFB35:
+  27              		.file 1 "HandleLowPower.c"
+   1:HandleLowPower.c **** /******************************************************************************
+   2:HandleLowPower.c **** * Project Name		: PSoC_4_BLE_CapSense_Slider_LED
+   3:HandleLowPower.c **** * File Name			: HandleLowPower.c
+   4:HandleLowPower.c **** * Version 			: 1.0
+   5:HandleLowPower.c **** * Device Used		: CY8C4248LQI-BL583
+   6:HandleLowPower.c **** * Software Used		: PSoC Creator 4.2
+   7:HandleLowPower.c **** * Compiler    		: ARM GCC 5.4.1
+   8:HandleLowPower.c **** * Related Hardware	: CY8CKIT-042-BLE-A Bluetooth Low Energy Pioneer Kit
+   9:HandleLowPower.c **** ******************************************************************************
+  10:HandleLowPower.c **** * Copyright (2018), Cypress Semiconductor Corporation. All rights reserved.
+  11:HandleLowPower.c **** *******************************************************************************
+  12:HandleLowPower.c **** * This software, including source code, documentation and related materials
+  13:HandleLowPower.c **** * (“Software”), is owned by Cypress Semiconductor Corporation or one of its
+  14:HandleLowPower.c **** * subsidiaries (“Cypress”) and is protected by and subject to worldwide patent
+  15:HandleLowPower.c **** * protection (United States and foreign), United States copyright laws and
+  16:HandleLowPower.c **** * international treaty provisions. Therefore, you may use this Software only
+  17:HandleLowPower.c **** * as provided in the license agreement accompanying the software package from
+  18:HandleLowPower.c **** * which you obtained this Software (“EULA”).
+  19:HandleLowPower.c **** *
+  20:HandleLowPower.c **** * If no EULA applies, Cypress hereby grants you a personal, nonexclusive,
+  21:HandleLowPower.c **** * non-transferable license to copy, modify, and compile the Software source
+  22:HandleLowPower.c **** * code solely for use in connection with Cypress’s integrated circuit products.
+  23:HandleLowPower.c **** * Any reproduction, modification, translation, compilation, or representation
+  24:HandleLowPower.c **** * of this Software except as specified above is prohibited without the express
+  25:HandleLowPower.c **** * written permission of Cypress.
+  26:HandleLowPower.c **** *
+  27:HandleLowPower.c **** * Disclaimer: THIS SOFTWARE IS PROVIDED AS-IS, WITH NO WARRANTY OF ANY KIND, 
+  28:HandleLowPower.c **** * EXPRESS OR IMPLIED, INCLUDING, BUT NOT LIMITED TO, NONINFRINGEMENT, IMPLIED 
+  29:HandleLowPower.c **** * WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE. Cypress 
+  30:HandleLowPower.c **** * reserves the right to make changes to the Software without notice. Cypress 
+ARM GAS  C:\Users\Jack\AppData\Local\Temp\cc0tVUsB.s 			page 2
+
+
+  31:HandleLowPower.c **** * does not assume any liability arising out of the application or use of the 
+  32:HandleLowPower.c **** * Software or any product or circuit described in the Software. Cypress does 
+  33:HandleLowPower.c **** * not authorize its products for use in any products where a malfunction or 
+  34:HandleLowPower.c **** * failure of the Cypress product may reasonably be expected to result in 
+  35:HandleLowPower.c **** * significant property damage, injury or death (“High Risk Product”). By 
+  36:HandleLowPower.c **** * including Cypress’s product in a High Risk Product, the manufacturer of such 
+  37:HandleLowPower.c **** * system or application assumes all risk of such use and in doing so agrees to 
+  38:HandleLowPower.c **** * indemnify Cypress against all liability.
+  39:HandleLowPower.c **** *******************************************************************************/
+  40:HandleLowPower.c **** 
+  41:HandleLowPower.c **** #include <main.h>
+  42:HandleLowPower.c **** 
+  43:HandleLowPower.c **** extern uint8 shut_down_led;
+  44:HandleLowPower.c **** /*******************************************************************************
+  45:HandleLowPower.c **** * Function Name: HandleLowPowerMode
+  46:HandleLowPower.c **** ********************************************************************************
+  47:HandleLowPower.c **** * Summary:
+  48:HandleLowPower.c **** *        This function puts the BLESS in deep sleep mode and CPU to sleep mode. 
+  49:HandleLowPower.c **** * System will resume from here when it wakes from user button press.
+  50:HandleLowPower.c **** *
+  51:HandleLowPower.c **** * Parameters:
+  52:HandleLowPower.c **** *  void
+  53:HandleLowPower.c **** *
+  54:HandleLowPower.c **** * Return:
+  55:HandleLowPower.c **** *  void
+  56:HandleLowPower.c **** *
+  57:HandleLowPower.c **** *******************************************************************************/
+  58:HandleLowPower.c **** void HandleLowPowerMode(void)
+  59:HandleLowPower.c **** {
+  28              		.loc 1 59 0
+  29              		.cfi_startproc
+  30              		@ args = 0, pretend = 0, frame = 8
+  31              		@ frame_needed = 1, uses_anonymous_args = 0
+  32 0000 90B5     		push	{r4, r7, lr}
+  33              		.cfi_def_cfa_offset 12
+  34              		.cfi_offset 4, -12
+  35              		.cfi_offset 7, -8
+  36              		.cfi_offset 14, -4
+  37 0002 83B0     		sub	sp, sp, #12
+  38              		.cfi_def_cfa_offset 24
+  39 0004 00AF     		add	r7, sp, #0
+  40              		.cfi_def_cfa_register 7
+  60:HandleLowPower.c **** 	#ifdef ENABLE_LOW_POWER_MODE
+  61:HandleLowPower.c **** 		/* Local variable to store the status of BLESS Hardware block */
+  62:HandleLowPower.c **** 		CYBLE_LP_MODE_T sleepMode;
+  63:HandleLowPower.c **** 		CYBLE_BLESS_STATE_T blessState;
+  64:HandleLowPower.c **** 		
+  65:HandleLowPower.c **** 		#ifdef CAPSENSE_ENABLED
+  66:HandleLowPower.c **** 		/* Put CapSense to Sleep*/
+  67:HandleLowPower.c **** 		CapSense_Sleep();
+  41              		.loc 1 67 0
+  42 0006 FFF7FEFF 		bl	CapSense_Sleep
+  68:HandleLowPower.c **** 		#endif
+  69:HandleLowPower.c **** 		
+  70:HandleLowPower.c **** 		/* Put BLESS into Deep Sleep and check the return status */
+  71:HandleLowPower.c **** 		sleepMode = CyBle_EnterLPM(CYBLE_BLESS_DEEPSLEEP);
+  43              		.loc 1 71 0
+ARM GAS  C:\Users\Jack\AppData\Local\Temp\cc0tVUsB.s 			page 3
+
+
+  44 000a FC1D     		adds	r4, r7, #7
+  45 000c 0320     		movs	r0, #3
+  46 000e FFF7FEFF 		bl	CyBle_EnterLPM
+  47 0012 0300     		movs	r3, r0
+  48 0014 2370     		strb	r3, [r4]
+  72:HandleLowPower.c **** 		
+  73:HandleLowPower.c **** 		/* Disable global interrupt to prevent changes from any other interrupt ISR */
+  74:HandleLowPower.c **** 		CyGlobalIntDisable;
+  49              		.loc 1 74 0
+  50              		.syntax divided
+  51              	@ 74 "HandleLowPower.c" 1
+  52 0016 72B6     		CPSID   i
+  53              	@ 0 "" 2
+  75:HandleLowPower.c **** 	
+  76:HandleLowPower.c **** 		/* Check the Status of BLESS */
+  77:HandleLowPower.c **** 		blessState = CyBle_GetBleSsState();
+  54              		.loc 1 77 0
+  55              		.thumb
+  56              		.syntax unified
+  57 0018 BC1D     		adds	r4, r7, #6
+  58 001a FFF7FEFF 		bl	CyBle_GetBleSsState
+  59 001e 0300     		movs	r3, r0
+  60 0020 2370     		strb	r3, [r4]
+  78:HandleLowPower.c **** 
+  79:HandleLowPower.c **** 		if(sleepMode == CYBLE_BLESS_DEEPSLEEP)
+  61              		.loc 1 79 0
+  62 0022 FB1D     		adds	r3, r7, #7
+  63 0024 1B78     		ldrb	r3, [r3]
+  64 0026 032B     		cmp	r3, #3
+  65 0028 1FD1     		bne	.L2
+  80:HandleLowPower.c **** 		{
+  81:HandleLowPower.c **** 		    /* If the ECO has started or the BLESS can go to Deep Sleep, then place CPU 
+  82:HandleLowPower.c **** 			* to Deep Sleep */
+  83:HandleLowPower.c **** 			if(blessState == CYBLE_BLESS_STATE_ECO_ON || blessState == CYBLE_BLESS_STATE_DEEPSLEEP)
+  66              		.loc 1 83 0
+  67 002a BB1D     		adds	r3, r7, #6
+  68 002c 1B78     		ldrb	r3, [r3]
+  69 002e 042B     		cmp	r3, #4
+  70 0030 03D0     		beq	.L3
+  71              		.loc 1 83 0 is_stmt 0 discriminator 1
+  72 0032 BB1D     		adds	r3, r7, #6
+  73 0034 1B78     		ldrb	r3, [r3]
+  74 0036 062B     		cmp	r3, #6
+  75 0038 1DD1     		bne	.L6
+  76              	.L3:
+  84:HandleLowPower.c **** 		    {
+  85:HandleLowPower.c **** 				if(shut_down_led)
+  77              		.loc 1 85 0 is_stmt 1
+  78 003a 124B     		ldr	r3, .L7
+  79 003c 1B78     		ldrb	r3, [r3]
+  80 003e 002B     		cmp	r3, #0
+  81 0040 0AD0     		beq	.L5
+  86:HandleLowPower.c **** 				{
+  87:HandleLowPower.c **** 					/* Put PrISM modules to sleep */
+  88:HandleLowPower.c **** 					PrISM_1_Sleep();
+  82              		.loc 1 88 0
+  83 0042 FFF7FEFF 		bl	PrISM_1_Sleep
+ARM GAS  C:\Users\Jack\AppData\Local\Temp\cc0tVUsB.s 			page 4
+
+
+  89:HandleLowPower.c **** 					PrISM_2_Sleep();
+  84              		.loc 1 89 0
+  85 0046 FFF7FEFF 		bl	PrISM_2_Sleep
+  90:HandleLowPower.c **** 					
+  91:HandleLowPower.c **** 					/* Place CPU to Deep sleep only when the RGB PrISM module is not 
+  92:HandleLowPower.c **** 					* active (indicated by flag 'shut_down_led'). 
+  93:HandleLowPower.c **** 					* If RGB PrISM is active, then the CPU should only be placed in 
+  94:HandleLowPower.c **** 					* Sleep to allow the PrISM to function and control the color 
+  95:HandleLowPower.c **** 					* and Intensity */
+  96:HandleLowPower.c **** 			        CySysPmDeepSleep();
+  86              		.loc 1 96 0
+  87 004a FFF7FEFF 		bl	CySysPmDeepSleep
+  97:HandleLowPower.c **** 					
+  98:HandleLowPower.c **** 					/* After system wakes up, wake up the PrISM modules*/
+  99:HandleLowPower.c **** 					PrISM_1_Wakeup();
+  88              		.loc 1 99 0
+  89 004e FFF7FEFF 		bl	PrISM_1_Wakeup
+ 100:HandleLowPower.c **** 					PrISM_2_Wakeup();
+  90              		.loc 1 100 0
+  91 0052 FFF7FEFF 		bl	PrISM_2_Wakeup
+  92 0056 0EE0     		b	.L6
+  93              	.L5:
+ 101:HandleLowPower.c **** 				}
+ 102:HandleLowPower.c **** 				else
+ 103:HandleLowPower.c **** 				{
+ 104:HandleLowPower.c **** 					/* If the system is controlling RGB LED, then PrISM needs to be running. 
+ 105:HandleLowPower.c **** 					* Put CPU to sleep only */
+ 106:HandleLowPower.c **** 					CySysClkWriteImoFreq(IMO_FREQUENCY_3MHZ);
+  94              		.loc 1 106 0
+  95 0058 0320     		movs	r0, #3
+  96 005a FFF7FEFF 		bl	CySysClkWriteImoFreq
+ 107:HandleLowPower.c **** 					CySysPmSleep();
+  97              		.loc 1 107 0
+  98 005e FFF7FEFF 		bl	CySysPmSleep
+ 108:HandleLowPower.c **** 					CySysClkWriteImoFreq(IMO_FREQUENCY_12MHZ);
+  99              		.loc 1 108 0
+ 100 0062 0C20     		movs	r0, #12
+ 101 0064 FFF7FEFF 		bl	CySysClkWriteImoFreq
+ 102 0068 05E0     		b	.L6
+ 103              	.L2:
+ 109:HandleLowPower.c **** 
+ 110:HandleLowPower.c **** 				}
+ 111:HandleLowPower.c **** 		 	}
+ 112:HandleLowPower.c **** 		}
+ 113:HandleLowPower.c **** 		else
+ 114:HandleLowPower.c **** 		{
+ 115:HandleLowPower.c **** 		    if(blessState != CYBLE_BLESS_STATE_EVENT_CLOSE)
+ 104              		.loc 1 115 0
+ 105 006a BB1D     		adds	r3, r7, #6
+ 106 006c 1B78     		ldrb	r3, [r3]
+ 107 006e 022B     		cmp	r3, #2
+ 108 0070 01D0     		beq	.L6
+ 116:HandleLowPower.c **** 		    {
+ 117:HandleLowPower.c **** 				/* If the BLESS hardware block cannot go to Deep Sleep and BLE Event has not 
+ 118:HandleLowPower.c **** 				* closed yet, then place CPU to Sleep */
+ 119:HandleLowPower.c **** 		        CySysPmSleep();
+ 109              		.loc 1 119 0
+ARM GAS  C:\Users\Jack\AppData\Local\Temp\cc0tVUsB.s 			page 5
+
+
+ 110 0072 FFF7FEFF 		bl	CySysPmSleep
+ 111              	.L6:
+ 120:HandleLowPower.c **** 		    }
+ 121:HandleLowPower.c **** 		}
+ 122:HandleLowPower.c **** 		
+ 123:HandleLowPower.c **** 		/* Re-enable global interrupt mask after wakeup */
+ 124:HandleLowPower.c **** 		CyGlobalIntEnable;
+ 112              		.loc 1 124 0
+ 113              		.syntax divided
+ 114              	@ 124 "HandleLowPower.c" 1
+ 115 0076 62B6     		CPSIE   i
+ 116              	@ 0 "" 2
+ 125:HandleLowPower.c **** 		
+ 126:HandleLowPower.c **** 		#ifdef CAPSENSE_ENABLED
+ 127:HandleLowPower.c **** 		/* Wakeup CapSense Block */
+ 128:HandleLowPower.c **** 		CapSense_Wakeup();
+ 117              		.loc 1 128 0
+ 118              		.thumb
+ 119              		.syntax unified
+ 120 0078 FFF7FEFF 		bl	CapSense_Wakeup
+ 129:HandleLowPower.c **** 		#endif
+ 130:HandleLowPower.c **** 		
+ 131:HandleLowPower.c **** 	#endif
+ 132:HandleLowPower.c **** }
+ 121              		.loc 1 132 0
+ 122 007c C046     		nop
+ 123 007e BD46     		mov	sp, r7
+ 124 0080 03B0     		add	sp, sp, #12
+ 125              		@ sp needed
+ 126 0082 90BD     		pop	{r4, r7, pc}
+ 127              	.L8:
+ 128              		.align	2
+ 129              	.L7:
+ 130 0084 00000000 		.word	shut_down_led
+ 131              		.cfi_endproc
+ 132              	.LFE35:
+ 133              		.size	HandleLowPowerMode, .-HandleLowPowerMode
+ 134              		.section	.text.MyISR,"ax",%progbits
+ 135              		.align	2
+ 136              		.global	MyISR
+ 137              		.code	16
+ 138              		.thumb_func
+ 139              		.type	MyISR, %function
+ 140              	MyISR:
+ 141              	.LFB36:
+ 133:HandleLowPower.c **** 
+ 134:HandleLowPower.c **** /*******************************************************************************
+ 135:HandleLowPower.c **** * Function Name: MyISR
+ 136:HandleLowPower.c **** ********************************************************************************
+ 137:HandleLowPower.c **** * Summary:
+ 138:HandleLowPower.c **** *        ISR routine for isr_button. System enters here after CPU wakeup.
+ 139:HandleLowPower.c **** * Clears pending interrupt.
+ 140:HandleLowPower.c **** *
+ 141:HandleLowPower.c **** * Parameters:
+ 142:HandleLowPower.c **** *  void
+ 143:HandleLowPower.c **** *
+ 144:HandleLowPower.c **** * Return:
+ARM GAS  C:\Users\Jack\AppData\Local\Temp\cc0tVUsB.s 			page 6
+
+
+ 145:HandleLowPower.c **** *  void
+ 146:HandleLowPower.c **** *
+ 147:HandleLowPower.c **** *******************************************************************************/
+ 148:HandleLowPower.c **** CY_ISR(MyISR)
+ 149:HandleLowPower.c **** {
+ 142              		.loc 1 149 0
+ 143              		.cfi_startproc
+ 144              		@ args = 0, pretend = 0, frame = 0
+ 145              		@ frame_needed = 1, uses_anonymous_args = 0
+ 146 0000 80B5     		push	{r7, lr}
+ 147              		.cfi_def_cfa_offset 8
+ 148              		.cfi_offset 7, -8
+ 149              		.cfi_offset 14, -4
+ 150 0002 00AF     		add	r7, sp, #0
+ 151              		.cfi_def_cfa_register 7
+ 150:HandleLowPower.c **** 	/* Clear Pending interrupts */
+ 151:HandleLowPower.c **** 	isr_button_ClearPending();
+ 152              		.loc 1 151 0
+ 153 0004 FFF7FEFF 		bl	isr_button_ClearPending
+ 152:HandleLowPower.c **** 	
+ 153:HandleLowPower.c **** 	User_Button_ClearInterrupt();
+ 154              		.loc 1 153 0
+ 155 0008 FFF7FEFF 		bl	User_Button_ClearInterrupt
+ 154:HandleLowPower.c **** }
+ 156              		.loc 1 154 0
+ 157 000c C046     		nop
+ 158 000e BD46     		mov	sp, r7
+ 159              		@ sp needed
+ 160 0010 80BD     		pop	{r7, pc}
+ 161              		.cfi_endproc
+ 162              	.LFE36:
+ 163              		.size	MyISR, .-MyISR
+ 164 0012 C046     		.text
+ 165              	.Letext0:
+ 166              		.file 2 "Generated_Source\\PSoC4/cytypes.h"
+ 167              		.file 3 "Generated_Source\\PSoC4/BLE_Stack.h"
+ 168              		.section	.debug_info,"",%progbits
+ 169              	.Ldebug_info0:
+ 170 0000 67010000 		.4byte	0x167
+ 171 0004 0400     		.2byte	0x4
+ 172 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 173 000a 04       		.byte	0x4
+ 174 000b 01       		.uleb128 0x1
+ 175 000c 43010000 		.4byte	.LASF32
+ 176 0010 0C       		.byte	0xc
+ 177 0011 5C030000 		.4byte	.LASF33
+ 178 0015 00000000 		.4byte	.LASF34
+ 179 0019 00000000 		.4byte	.Ldebug_ranges0+0
+ 180 001d 00000000 		.4byte	0
+ 181 0021 00000000 		.4byte	.Ldebug_line0
+ 182 0025 02       		.uleb128 0x2
+ 183 0026 01       		.byte	0x1
+ 184 0027 06       		.byte	0x6
+ 185 0028 3D030000 		.4byte	.LASF0
+ 186 002c 02       		.uleb128 0x2
+ 187 002d 01       		.byte	0x1
+ 188 002e 08       		.byte	0x8
+ARM GAS  C:\Users\Jack\AppData\Local\Temp\cc0tVUsB.s 			page 7
+
+
+ 189 002f FB000000 		.4byte	.LASF1
+ 190 0033 02       		.uleb128 0x2
+ 191 0034 02       		.byte	0x2
+ 192 0035 05       		.byte	0x5
+ 193 0036 0E030000 		.4byte	.LASF2
+ 194 003a 02       		.uleb128 0x2
+ 195 003b 02       		.byte	0x2
+ 196 003c 07       		.byte	0x7
+ 197 003d B2000000 		.4byte	.LASF3
+ 198 0041 02       		.uleb128 0x2
+ 199 0042 04       		.byte	0x4
+ 200 0043 05       		.byte	0x5
+ 201 0044 28030000 		.4byte	.LASF4
+ 202 0048 02       		.uleb128 0x2
+ 203 0049 04       		.byte	0x4
+ 204 004a 07       		.byte	0x7
+ 205 004b 17010000 		.4byte	.LASF5
+ 206 004f 02       		.uleb128 0x2
+ 207 0050 08       		.byte	0x8
+ 208 0051 05       		.byte	0x5
+ 209 0052 B1020000 		.4byte	.LASF6
+ 210 0056 02       		.uleb128 0x2
+ 211 0057 08       		.byte	0x8
+ 212 0058 07       		.byte	0x7
+ 213 0059 E4000000 		.4byte	.LASF7
+ 214 005d 03       		.uleb128 0x3
+ 215 005e 04       		.byte	0x4
+ 216 005f 05       		.byte	0x5
+ 217 0060 696E7400 		.ascii	"int\000"
+ 218 0064 02       		.uleb128 0x2
+ 219 0065 04       		.byte	0x4
+ 220 0066 07       		.byte	0x7
+ 221 0067 4B020000 		.4byte	.LASF8
+ 222 006b 04       		.uleb128 0x4
+ 223 006c 29010000 		.4byte	.LASF19
+ 224 0070 02       		.byte	0x2
+ 225 0071 E401     		.2byte	0x1e4
+ 226 0073 2C000000 		.4byte	0x2c
+ 227 0077 02       		.uleb128 0x2
+ 228 0078 04       		.byte	0x4
+ 229 0079 04       		.byte	0x4
+ 230 007a DE000000 		.4byte	.LASF9
+ 231 007e 02       		.uleb128 0x2
+ 232 007f 08       		.byte	0x8
+ 233 0080 04       		.byte	0x4
+ 234 0081 13020000 		.4byte	.LASF10
+ 235 0085 02       		.uleb128 0x2
+ 236 0086 01       		.byte	0x1
+ 237 0087 08       		.byte	0x8
+ 238 0088 58020000 		.4byte	.LASF11
+ 239 008c 02       		.uleb128 0x2
+ 240 008d 04       		.byte	0x4
+ 241 008e 07       		.byte	0x7
+ 242 008f A8020000 		.4byte	.LASF12
+ 243 0093 02       		.uleb128 0x2
+ 244 0094 08       		.byte	0x8
+ 245 0095 04       		.byte	0x4
+ARM GAS  C:\Users\Jack\AppData\Local\Temp\cc0tVUsB.s 			page 8
+
+
+ 246 0096 31030000 		.4byte	.LASF13
+ 247 009a 05       		.uleb128 0x5
+ 248 009b 01       		.byte	0x1
+ 249 009c 2C000000 		.4byte	0x2c
+ 250 00a0 03       		.byte	0x3
+ 251 00a1 5D04     		.2byte	0x45d
+ 252 00a3 C6000000 		.4byte	0xc6
+ 253 00a7 06       		.uleb128 0x6
+ 254 00a8 49030000 		.4byte	.LASF14
+ 255 00ac 01       		.byte	0x1
+ 256 00ad 06       		.uleb128 0x6
+ 257 00ae 9A000000 		.4byte	.LASF15
+ 258 00b2 02       		.byte	0x2
+ 259 00b3 06       		.uleb128 0x6
+ 260 00b4 DB020000 		.4byte	.LASF16
+ 261 00b8 03       		.byte	0x3
+ 262 00b9 06       		.uleb128 0x6
+ 263 00ba FD010000 		.4byte	.LASF17
+ 264 00be 04       		.byte	0x4
+ 265 00bf 06       		.uleb128 0x6
+ 266 00c0 2F010000 		.4byte	.LASF18
+ 267 00c4 FF       		.byte	0xff
+ 268 00c5 00       		.byte	0
+ 269 00c6 04       		.uleb128 0x4
+ 270 00c7 18030000 		.4byte	.LASF20
+ 271 00cb 03       		.byte	0x3
+ 272 00cc 7904     		.2byte	0x479
+ 273 00ce 9A000000 		.4byte	0x9a
+ 274 00d2 05       		.uleb128 0x5
+ 275 00d3 01       		.byte	0x1
+ 276 00d4 2C000000 		.4byte	0x2c
+ 277 00d8 03       		.byte	0x3
+ 278 00d9 7D04     		.2byte	0x47d
+ 279 00db 10010000 		.4byte	0x110
+ 280 00df 06       		.uleb128 0x6
+ 281 00e0 81000000 		.4byte	.LASF21
+ 282 00e4 01       		.byte	0x1
+ 283 00e5 06       		.uleb128 0x6
+ 284 00e6 70020000 		.4byte	.LASF22
+ 285 00ea 02       		.byte	0x2
+ 286 00eb 06       		.uleb128 0x6
+ 287 00ec D1010000 		.4byte	.LASF23
+ 288 00f0 03       		.byte	0x3
+ 289 00f1 06       		.uleb128 0x6
+ 290 00f2 C5000000 		.4byte	.LASF24
+ 291 00f6 04       		.byte	0x4
+ 292 00f7 06       		.uleb128 0x6
+ 293 00f8 F1020000 		.4byte	.LASF25
+ 294 00fc 05       		.byte	0x5
+ 295 00fd 06       		.uleb128 0x6
+ 296 00fe BF020000 		.4byte	.LASF26
+ 297 0102 06       		.byte	0x6
+ 298 0103 06       		.uleb128 0x6
+ 299 0104 2F020000 		.4byte	.LASF27
+ 300 0108 07       		.byte	0x7
+ 301 0109 06       		.uleb128 0x6
+ 302 010a 8E020000 		.4byte	.LASF28
+ARM GAS  C:\Users\Jack\AppData\Local\Temp\cc0tVUsB.s 			page 9
+
+
+ 303 010e FF       		.byte	0xff
+ 304 010f 00       		.byte	0
+ 305 0110 04       		.uleb128 0x4
+ 306 0111 E9010000 		.4byte	.LASF29
+ 307 0115 03       		.byte	0x3
+ 308 0116 8E04     		.2byte	0x48e
+ 309 0118 D2000000 		.4byte	0xd2
+ 310 011c 07       		.uleb128 0x7
+ 311 011d 5D020000 		.4byte	.LASF35
+ 312 0121 01       		.byte	0x1
+ 313 0122 3A       		.byte	0x3a
+ 314 0123 00000000 		.4byte	.LFB35
+ 315 0127 88000000 		.4byte	.LFE35-.LFB35
+ 316 012b 01       		.uleb128 0x1
+ 317 012c 9C       		.byte	0x9c
+ 318 012d 4E010000 		.4byte	0x14e
+ 319 0131 08       		.uleb128 0x8
+ 320 0132 1A020000 		.4byte	.LASF30
+ 321 0136 01       		.byte	0x1
+ 322 0137 3E       		.byte	0x3e
+ 323 0138 C6000000 		.4byte	0xc6
+ 324 013c 02       		.uleb128 0x2
+ 325 013d 91       		.byte	0x91
+ 326 013e 6F       		.sleb128 -17
+ 327 013f 08       		.uleb128 0x8
+ 328 0140 24020000 		.4byte	.LASF31
+ 329 0144 01       		.byte	0x1
+ 330 0145 3F       		.byte	0x3f
+ 331 0146 10010000 		.4byte	0x110
+ 332 014a 02       		.uleb128 0x2
+ 333 014b 91       		.byte	0x91
+ 334 014c 6E       		.sleb128 -18
+ 335 014d 00       		.byte	0
+ 336 014e 09       		.uleb128 0x9
+ 337 014f AC000000 		.4byte	.LASF36
+ 338 0153 01       		.byte	0x1
+ 339 0154 94       		.byte	0x94
+ 340 0155 00000000 		.4byte	.LFB36
+ 341 0159 12000000 		.4byte	.LFE36-.LFB36
+ 342 015d 01       		.uleb128 0x1
+ 343 015e 9C       		.byte	0x9c
+ 344 015f 0A       		.uleb128 0xa
+ 345 0160 09010000 		.4byte	.LASF37
+ 346 0164 01       		.byte	0x1
+ 347 0165 2B       		.byte	0x2b
+ 348 0166 6B000000 		.4byte	0x6b
+ 349 016a 00       		.byte	0
+ 350              		.section	.debug_abbrev,"",%progbits
+ 351              	.Ldebug_abbrev0:
+ 352 0000 01       		.uleb128 0x1
+ 353 0001 11       		.uleb128 0x11
+ 354 0002 01       		.byte	0x1
+ 355 0003 25       		.uleb128 0x25
+ 356 0004 0E       		.uleb128 0xe
+ 357 0005 13       		.uleb128 0x13
+ 358 0006 0B       		.uleb128 0xb
+ 359 0007 03       		.uleb128 0x3
+ARM GAS  C:\Users\Jack\AppData\Local\Temp\cc0tVUsB.s 			page 10
+
+
+ 360 0008 0E       		.uleb128 0xe
+ 361 0009 1B       		.uleb128 0x1b
+ 362 000a 0E       		.uleb128 0xe
+ 363 000b 55       		.uleb128 0x55
+ 364 000c 17       		.uleb128 0x17
+ 365 000d 11       		.uleb128 0x11
+ 366 000e 01       		.uleb128 0x1
+ 367 000f 10       		.uleb128 0x10
+ 368 0010 17       		.uleb128 0x17
+ 369 0011 00       		.byte	0
+ 370 0012 00       		.byte	0
+ 371 0013 02       		.uleb128 0x2
+ 372 0014 24       		.uleb128 0x24
+ 373 0015 00       		.byte	0
+ 374 0016 0B       		.uleb128 0xb
+ 375 0017 0B       		.uleb128 0xb
+ 376 0018 3E       		.uleb128 0x3e
+ 377 0019 0B       		.uleb128 0xb
+ 378 001a 03       		.uleb128 0x3
+ 379 001b 0E       		.uleb128 0xe
+ 380 001c 00       		.byte	0
+ 381 001d 00       		.byte	0
+ 382 001e 03       		.uleb128 0x3
+ 383 001f 24       		.uleb128 0x24
+ 384 0020 00       		.byte	0
+ 385 0021 0B       		.uleb128 0xb
+ 386 0022 0B       		.uleb128 0xb
+ 387 0023 3E       		.uleb128 0x3e
+ 388 0024 0B       		.uleb128 0xb
+ 389 0025 03       		.uleb128 0x3
+ 390 0026 08       		.uleb128 0x8
+ 391 0027 00       		.byte	0
+ 392 0028 00       		.byte	0
+ 393 0029 04       		.uleb128 0x4
+ 394 002a 16       		.uleb128 0x16
+ 395 002b 00       		.byte	0
+ 396 002c 03       		.uleb128 0x3
+ 397 002d 0E       		.uleb128 0xe
+ 398 002e 3A       		.uleb128 0x3a
+ 399 002f 0B       		.uleb128 0xb
+ 400 0030 3B       		.uleb128 0x3b
+ 401 0031 05       		.uleb128 0x5
+ 402 0032 49       		.uleb128 0x49
+ 403 0033 13       		.uleb128 0x13
+ 404 0034 00       		.byte	0
+ 405 0035 00       		.byte	0
+ 406 0036 05       		.uleb128 0x5
+ 407 0037 04       		.uleb128 0x4
+ 408 0038 01       		.byte	0x1
+ 409 0039 0B       		.uleb128 0xb
+ 410 003a 0B       		.uleb128 0xb
+ 411 003b 49       		.uleb128 0x49
+ 412 003c 13       		.uleb128 0x13
+ 413 003d 3A       		.uleb128 0x3a
+ 414 003e 0B       		.uleb128 0xb
+ 415 003f 3B       		.uleb128 0x3b
+ 416 0040 05       		.uleb128 0x5
+ARM GAS  C:\Users\Jack\AppData\Local\Temp\cc0tVUsB.s 			page 11
+
+
+ 417 0041 01       		.uleb128 0x1
+ 418 0042 13       		.uleb128 0x13
+ 419 0043 00       		.byte	0
+ 420 0044 00       		.byte	0
+ 421 0045 06       		.uleb128 0x6
+ 422 0046 28       		.uleb128 0x28
+ 423 0047 00       		.byte	0
+ 424 0048 03       		.uleb128 0x3
+ 425 0049 0E       		.uleb128 0xe
+ 426 004a 1C       		.uleb128 0x1c
+ 427 004b 0B       		.uleb128 0xb
+ 428 004c 00       		.byte	0
+ 429 004d 00       		.byte	0
+ 430 004e 07       		.uleb128 0x7
+ 431 004f 2E       		.uleb128 0x2e
+ 432 0050 01       		.byte	0x1
+ 433 0051 3F       		.uleb128 0x3f
+ 434 0052 19       		.uleb128 0x19
+ 435 0053 03       		.uleb128 0x3
+ 436 0054 0E       		.uleb128 0xe
+ 437 0055 3A       		.uleb128 0x3a
+ 438 0056 0B       		.uleb128 0xb
+ 439 0057 3B       		.uleb128 0x3b
+ 440 0058 0B       		.uleb128 0xb
+ 441 0059 27       		.uleb128 0x27
+ 442 005a 19       		.uleb128 0x19
+ 443 005b 11       		.uleb128 0x11
+ 444 005c 01       		.uleb128 0x1
+ 445 005d 12       		.uleb128 0x12
+ 446 005e 06       		.uleb128 0x6
+ 447 005f 40       		.uleb128 0x40
+ 448 0060 18       		.uleb128 0x18
+ 449 0061 9642     		.uleb128 0x2116
+ 450 0063 19       		.uleb128 0x19
+ 451 0064 01       		.uleb128 0x1
+ 452 0065 13       		.uleb128 0x13
+ 453 0066 00       		.byte	0
+ 454 0067 00       		.byte	0
+ 455 0068 08       		.uleb128 0x8
+ 456 0069 34       		.uleb128 0x34
+ 457 006a 00       		.byte	0
+ 458 006b 03       		.uleb128 0x3
+ 459 006c 0E       		.uleb128 0xe
+ 460 006d 3A       		.uleb128 0x3a
+ 461 006e 0B       		.uleb128 0xb
+ 462 006f 3B       		.uleb128 0x3b
+ 463 0070 0B       		.uleb128 0xb
+ 464 0071 49       		.uleb128 0x49
+ 465 0072 13       		.uleb128 0x13
+ 466 0073 02       		.uleb128 0x2
+ 467 0074 18       		.uleb128 0x18
+ 468 0075 00       		.byte	0
+ 469 0076 00       		.byte	0
+ 470 0077 09       		.uleb128 0x9
+ 471 0078 2E       		.uleb128 0x2e
+ 472 0079 00       		.byte	0
+ 473 007a 3F       		.uleb128 0x3f
+ARM GAS  C:\Users\Jack\AppData\Local\Temp\cc0tVUsB.s 			page 12
+
+
+ 474 007b 19       		.uleb128 0x19
+ 475 007c 03       		.uleb128 0x3
+ 476 007d 0E       		.uleb128 0xe
+ 477 007e 3A       		.uleb128 0x3a
+ 478 007f 0B       		.uleb128 0xb
+ 479 0080 3B       		.uleb128 0x3b
+ 480 0081 0B       		.uleb128 0xb
+ 481 0082 27       		.uleb128 0x27
+ 482 0083 19       		.uleb128 0x19
+ 483 0084 11       		.uleb128 0x11
+ 484 0085 01       		.uleb128 0x1
+ 485 0086 12       		.uleb128 0x12
+ 486 0087 06       		.uleb128 0x6
+ 487 0088 40       		.uleb128 0x40
+ 488 0089 18       		.uleb128 0x18
+ 489 008a 9642     		.uleb128 0x2116
+ 490 008c 19       		.uleb128 0x19
+ 491 008d 00       		.byte	0
+ 492 008e 00       		.byte	0
+ 493 008f 0A       		.uleb128 0xa
+ 494 0090 34       		.uleb128 0x34
+ 495 0091 00       		.byte	0
+ 496 0092 03       		.uleb128 0x3
+ 497 0093 0E       		.uleb128 0xe
+ 498 0094 3A       		.uleb128 0x3a
+ 499 0095 0B       		.uleb128 0xb
+ 500 0096 3B       		.uleb128 0x3b
+ 501 0097 0B       		.uleb128 0xb
+ 502 0098 49       		.uleb128 0x49
+ 503 0099 13       		.uleb128 0x13
+ 504 009a 3F       		.uleb128 0x3f
+ 505 009b 19       		.uleb128 0x19
+ 506 009c 3C       		.uleb128 0x3c
+ 507 009d 19       		.uleb128 0x19
+ 508 009e 00       		.byte	0
+ 509 009f 00       		.byte	0
+ 510 00a0 00       		.byte	0
+ 511              		.section	.debug_aranges,"",%progbits
+ 512 0000 24000000 		.4byte	0x24
+ 513 0004 0200     		.2byte	0x2
+ 514 0006 00000000 		.4byte	.Ldebug_info0
+ 515 000a 04       		.byte	0x4
+ 516 000b 00       		.byte	0
+ 517 000c 0000     		.2byte	0
+ 518 000e 0000     		.2byte	0
+ 519 0010 00000000 		.4byte	.LFB35
+ 520 0014 88000000 		.4byte	.LFE35-.LFB35
+ 521 0018 00000000 		.4byte	.LFB36
+ 522 001c 12000000 		.4byte	.LFE36-.LFB36
+ 523 0020 00000000 		.4byte	0
+ 524 0024 00000000 		.4byte	0
+ 525              		.section	.debug_ranges,"",%progbits
+ 526              	.Ldebug_ranges0:
+ 527 0000 00000000 		.4byte	.LFB35
+ 528 0004 88000000 		.4byte	.LFE35
+ 529 0008 00000000 		.4byte	.LFB36
+ 530 000c 12000000 		.4byte	.LFE36
+ARM GAS  C:\Users\Jack\AppData\Local\Temp\cc0tVUsB.s 			page 13
+
+
+ 531 0010 00000000 		.4byte	0
+ 532 0014 00000000 		.4byte	0
+ 533              		.section	.debug_line,"",%progbits
+ 534              	.Ldebug_line0:
+ 535 0000 9D000000 		.section	.debug_str,"MS",%progbits,1
+ 535      02005A00 
+ 535      00000201 
+ 535      FB0E0D00 
+ 535      01010101 
+ 536              	.LASF34:
+ 537 0000 433A5C55 		.ascii	"C:\\Users\\Jack\\Documents\\PSoC Creator\\LED capse"
+ 537      73657273 
+ 537      5C4A6163 
+ 537      6B5C446F 
+ 537      63756D65 
+ 538 002e 6E736520 		.ascii	"nse slider\\PSoC_4_BLE_CapSense_Slider_LED01\\PSoC_"
+ 538      736C6964 
+ 538      65725C50 
+ 538      536F435F 
+ 538      345F424C 
+ 539 005f 345F424C 		.ascii	"4_BLE_CapSense_Slider_LED01.cydsn\000"
+ 539      455F4361 
+ 539      7053656E 
+ 539      73655F53 
+ 539      6C696465 
+ 540              	.LASF21:
+ 541 0081 4359424C 		.ascii	"CYBLE_BLESS_STATE_ACTIVE\000"
+ 541      455F424C 
+ 541      4553535F 
+ 541      53544154 
+ 541      455F4143 
+ 542              	.LASF15:
+ 543 009a 4359424C 		.ascii	"CYBLE_BLESS_SLEEP\000"
+ 543      455F424C 
+ 543      4553535F 
+ 543      534C4545 
+ 543      5000
+ 544              	.LASF36:
+ 545 00ac 4D794953 		.ascii	"MyISR\000"
+ 545      5200
+ 546              	.LASF3:
+ 547 00b2 73686F72 		.ascii	"short unsigned int\000"
+ 547      7420756E 
+ 547      7369676E 
+ 547      65642069 
+ 547      6E7400
+ 548              	.LASF24:
+ 549 00c5 4359424C 		.ascii	"CYBLE_BLESS_STATE_ECO_ON\000"
+ 549      455F424C 
+ 549      4553535F 
+ 549      53544154 
+ 549      455F4543 
+ 550              	.LASF9:
+ 551 00de 666C6F61 		.ascii	"float\000"
+ 551      7400
+ 552              	.LASF7:
+ 553 00e4 6C6F6E67 		.ascii	"long long unsigned int\000"
+ARM GAS  C:\Users\Jack\AppData\Local\Temp\cc0tVUsB.s 			page 14
+
+
+ 553      206C6F6E 
+ 553      6720756E 
+ 553      7369676E 
+ 553      65642069 
+ 554              	.LASF1:
+ 555 00fb 756E7369 		.ascii	"unsigned char\000"
+ 555      676E6564 
+ 555      20636861 
+ 555      7200
+ 556              	.LASF37:
+ 557 0109 73687574 		.ascii	"shut_down_led\000"
+ 557      5F646F77 
+ 557      6E5F6C65 
+ 557      6400
+ 558              	.LASF5:
+ 559 0117 6C6F6E67 		.ascii	"long unsigned int\000"
+ 559      20756E73 
+ 559      69676E65 
+ 559      6420696E 
+ 559      7400
+ 560              	.LASF19:
+ 561 0129 75696E74 		.ascii	"uint8\000"
+ 561      3800
+ 562              	.LASF18:
+ 563 012f 4359424C 		.ascii	"CYBLE_BLESS_INVALID\000"
+ 563      455F424C 
+ 563      4553535F 
+ 563      494E5641 
+ 563      4C494400 
+ 564              	.LASF32:
+ 565 0143 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
+ 565      43313120 
+ 565      352E342E 
+ 565      31203230 
+ 565      31363036 
+ 566 0176 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m0 -mthumb -g -O"
+ 566      20726576 
+ 566      6973696F 
+ 566      6E203233 
+ 566      37373135 
+ 567 01a9 30202D66 		.ascii	"0 -ffunction-sections -ffat-lto-objects\000"
+ 567      66756E63 
+ 567      74696F6E 
+ 567      2D736563 
+ 567      74696F6E 
+ 568              	.LASF23:
+ 569 01d1 4359424C 		.ascii	"CYBLE_BLESS_STATE_SLEEP\000"
+ 569      455F424C 
+ 569      4553535F 
+ 569      53544154 
+ 569      455F534C 
+ 570              	.LASF29:
+ 571 01e9 4359424C 		.ascii	"CYBLE_BLESS_STATE_T\000"
+ 571      455F424C 
+ 571      4553535F 
+ 571      53544154 
+ 571      455F5400 
+ARM GAS  C:\Users\Jack\AppData\Local\Temp\cc0tVUsB.s 			page 15
+
+
+ 572              	.LASF17:
+ 573 01fd 4359424C 		.ascii	"CYBLE_BLESS_HIBERNATE\000"
+ 573      455F424C 
+ 573      4553535F 
+ 573      48494245 
+ 573      524E4154 
+ 574              	.LASF10:
+ 575 0213 646F7562 		.ascii	"double\000"
+ 575      6C6500
+ 576              	.LASF30:
+ 577 021a 736C6565 		.ascii	"sleepMode\000"
+ 577      704D6F64 
+ 577      6500
+ 578              	.LASF31:
+ 579 0224 626C6573 		.ascii	"blessState\000"
+ 579      73537461 
+ 579      746500
+ 580              	.LASF27:
+ 581 022f 4359424C 		.ascii	"CYBLE_BLESS_STATE_HIBERNATE\000"
+ 581      455F424C 
+ 581      4553535F 
+ 581      53544154 
+ 581      455F4849 
+ 582              	.LASF8:
+ 583 024b 756E7369 		.ascii	"unsigned int\000"
+ 583      676E6564 
+ 583      20696E74 
+ 583      00
+ 584              	.LASF11:
+ 585 0258 63686172 		.ascii	"char\000"
+ 585      00
+ 586              	.LASF35:
+ 587 025d 48616E64 		.ascii	"HandleLowPowerMode\000"
+ 587      6C654C6F 
+ 587      77506F77 
+ 587      65724D6F 
+ 587      646500
+ 588              	.LASF22:
+ 589 0270 4359424C 		.ascii	"CYBLE_BLESS_STATE_EVENT_CLOSE\000"
+ 589      455F424C 
+ 589      4553535F 
+ 589      53544154 
+ 589      455F4556 
+ 590              	.LASF28:
+ 591 028e 4359424C 		.ascii	"CYBLE_BLESS_STATE_INVALID\000"
+ 591      455F424C 
+ 591      4553535F 
+ 591      53544154 
+ 591      455F494E 
+ 592              	.LASF12:
+ 593 02a8 73697A65 		.ascii	"sizetype\000"
+ 593      74797065 
+ 593      00
+ 594              	.LASF6:
+ 595 02b1 6C6F6E67 		.ascii	"long long int\000"
+ 595      206C6F6E 
+ 595      6720696E 
+ARM GAS  C:\Users\Jack\AppData\Local\Temp\cc0tVUsB.s 			page 16
+
+
+ 595      7400
+ 596              	.LASF26:
+ 597 02bf 4359424C 		.ascii	"CYBLE_BLESS_STATE_DEEPSLEEP\000"
+ 597      455F424C 
+ 597      4553535F 
+ 597      53544154 
+ 597      455F4445 
+ 598              	.LASF16:
+ 599 02db 4359424C 		.ascii	"CYBLE_BLESS_DEEPSLEEP\000"
+ 599      455F424C 
+ 599      4553535F 
+ 599      44454550 
+ 599      534C4545 
+ 600              	.LASF25:
+ 601 02f1 4359424C 		.ascii	"CYBLE_BLESS_STATE_ECO_STABLE\000"
+ 601      455F424C 
+ 601      4553535F 
+ 601      53544154 
+ 601      455F4543 
+ 602              	.LASF2:
+ 603 030e 73686F72 		.ascii	"short int\000"
+ 603      7420696E 
+ 603      7400
+ 604              	.LASF20:
+ 605 0318 4359424C 		.ascii	"CYBLE_LP_MODE_T\000"
+ 605      455F4C50 
+ 605      5F4D4F44 
+ 605      455F5400 
+ 606              	.LASF4:
+ 607 0328 6C6F6E67 		.ascii	"long int\000"
+ 607      20696E74 
+ 607      00
+ 608              	.LASF13:
+ 609 0331 6C6F6E67 		.ascii	"long double\000"
+ 609      20646F75 
+ 609      626C6500 
+ 610              	.LASF0:
+ 611 033d 7369676E 		.ascii	"signed char\000"
+ 611      65642063 
+ 611      68617200 
+ 612              	.LASF14:
+ 613 0349 4359424C 		.ascii	"CYBLE_BLESS_ACTIVE\000"
+ 613      455F424C 
+ 613      4553535F 
+ 613      41435449 
+ 613      564500
+ 614              	.LASF33:
+ 615 035c 48616E64 		.ascii	"HandleLowPower.c\000"
+ 615      6C654C6F 
+ 615      77506F77 
+ 615      65722E63 
+ 615      00
+ 616              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran

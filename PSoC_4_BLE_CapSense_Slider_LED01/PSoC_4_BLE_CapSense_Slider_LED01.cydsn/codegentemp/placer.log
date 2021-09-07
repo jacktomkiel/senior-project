@@ -1,0 +1,177 @@
+#***************************************************************************
+
+#sjplacer
+
+#Version:            1.1
+
+#Build Date:         Sep  9 2019 11:47:43
+
+#File Generated:     Sep 7 2021 17:04:12
+
+#Purpose:            
+
+#Copyright (C) 2010-2011 by Softjin Technologies Pvt Ltd. All rights reserved.
+
+#***************************************************************************
+
+Executing : C:\Program Files (x86)\Cypress\PSoC Creator\4.3\PSoC Creator\bin/sjplacer.exe --proj-name PSoC_4_BLE_CapSense_Slider_LED01 --netlist-vh2 PSoC_4_BLE_CapSense_Slider_LED01_p.vh2 --arch p4_udb2x2 --arch-file C:\Program Files (x86)\Cypress\PSoC Creator\4.3\PSoC Creator\dev\arch/udbdsi_2x2_04.cydata --ip-file C:\Program Files (x86)\Cypress\PSoC Creator\4.3\PSoC Creator\dev\psoc4/3/128k/ip_blocks.cydata --rrg-file C:\Program Files (x86)\Cypress\PSoC Creator\4.3\PSoC Creator\dev\psoc4/3/128k/route_arch-rrg.cydata --irq-file C:\Program Files (x86)\Cypress\PSoC Creator\4.3\PSoC Creator\dev\psoc4/3/irqconn.cydata --dsi-conn-file C:\Program Files (x86)\Cypress\PSoC Creator\4.3\PSoC Creator\dev\psoc4/3/dsiconn.cydata --pins-file pins_56-QFN.xml --lib-file PSoC_4_BLE_CapSense_Slider_LED01_p.lib --sdc-file PSoC_4_BLE_CapSense_Slider_LED01.sdc --io-pcf PSoC_4_BLE_CapSense_Slider_LED01.pci --outdir .
+
+		Softjin Techologies Placer, Version 1.1
+
+Build Date : Sep  9 2019	11:45:12
+
+D2004: Option and Settings Summary
+=============================================================
+Netlist vh2 file          - PSoC_4_BLE_CapSense_Slider_LED01_p.vh2
+Architecture file         - C:\Program Files (x86)\Cypress\PSoC Creator\4.3\PSoC Creator\dev\arch/udbdsi_2x2_04.cydata
+Package                   - 
+Defparam file             - 
+SDC file                  - PSoC_4_BLE_CapSense_Slider_LED01.sdc
+Output directory          - .
+Timing library            - PSoC_4_BLE_CapSense_Slider_LED01_p.lib
+IO Placement file         - PSoC_4_BLE_CapSense_Slider_LED01.pci
+
+D2050: Starting reading inputs for placer
+=============================================================
+D2065: Reading netlist file : "PSoC_4_BLE_CapSense_Slider_LED01_p.vh2"
+D2065: Reading arch file : "C:\Program Files (x86)\Cypress\PSoC Creator\4.3\PSoC Creator\dev\arch/udbdsi_2x2_04.cydata"
+D2051: Reading of inputs for placer completed successfully
+
+D2053: Starting placement of the design
+=============================================================
+
+Phase 2
+Phase 3
+
+Design Statistics after Packing
+    Number of Combinational MCs 	:	1
+    Number of Sequential MCs    	:	5
+    Number of DPs               	:	2
+    Number of Controls          	:	2
+    Number of Status            	:	0
+    Number of SyncCells         	:	0
+    Number of count7cells       	:	0
+
+Device Utilization Summary after Packing
+    Macrocells                  :	6/32
+    UDBS                        :	2/4
+    IOs                         :	10/38
+
+
+D2088: Phase 3, elapsed time : 0.0 (sec)
+
+Phase 4
+D2088: Phase 4, elapsed time : 0.0 (sec)
+
+Phase 6
+
+######################################################################
+Placement Timing Summary
+
+The timing summary is based on estimated routing delays after
+placement. For final timing report, please carry out the timing
+analysis after routing.
+======================================================================
+
+######################################################################
+                     Clock Summary 
+======================================================================
+Number of clocks: 13
+Clock: CapSense_SampleClk   | Frequency: N/A       | Target:   0.0 MHz
+Clock: CapSense_SampleClk(FFB) | Frequency: N/A       | Target:   0.0 MHz
+Clock: CapSense_SenseClk    | Frequency: N/A       | Target:   0.0 MHz
+Clock: CapSense_SenseClk(FFB) | Frequency: N/A       | Target:   0.0 MHz
+Clock: CyECO                | Frequency: N/A       | Target:  24.0 MHz
+Clock: CyHFCLK              | Frequency: N/A       | Target:  12.0 MHz
+Clock: CyILO                | Frequency: N/A       | Target:   0.0 MHz
+Clock: CyIMO                | Frequency: N/A       | Target:  12.0 MHz
+Clock: CyLFCLK              | Frequency: N/A       | Target:   0.0 MHz
+Clock: CyRouted1            | Frequency: N/A       | Target:  12.0 MHz
+Clock: CySYSCLK             | Frequency: N/A       | Target:  12.0 MHz
+Clock: CyWCO                | Frequency: N/A       | Target:   0.0 MHz
+Clock: PrISM_Clock          | Frequency:  87.5 MHz | Target:   0.1 MHz
+
+======================================================================
+                     End of Clock Summary
+######################################################################
+
+D2088: Phase 6, elapsed time : 0.0 (sec)
+
+Phase 7
+######################################################################
+                     Clock Summary 
+======================================================================
+Number of clocks: 13
+Clock: CapSense_SampleClk   | Frequency: N/A       | Target:   0.0 MHz
+Clock: CapSense_SampleClk(FFB) | Frequency: N/A       | Target:   0.0 MHz
+Clock: CapSense_SenseClk    | Frequency: N/A       | Target:   0.0 MHz
+Clock: CapSense_SenseClk(FFB) | Frequency: N/A       | Target:   0.0 MHz
+Clock: CyECO                | Frequency: N/A       | Target:  24.0 MHz
+Clock: CyHFCLK              | Frequency: N/A       | Target:  12.0 MHz
+Clock: CyILO                | Frequency: N/A       | Target:   0.0 MHz
+Clock: CyIMO                | Frequency: N/A       | Target:  12.0 MHz
+Clock: CyLFCLK              | Frequency: N/A       | Target:   0.0 MHz
+Clock: CyRouted1            | Frequency: N/A       | Target:  12.0 MHz
+Clock: CySYSCLK             | Frequency: N/A       | Target:  12.0 MHz
+Clock: CyWCO                | Frequency: N/A       | Target:   0.0 MHz
+Clock: PrISM_Clock          | Frequency:  87.5 MHz | Target:   0.1 MHz
+
+======================================================================
+                     End of Clock Summary
+######################################################################
+D2088: Phase 7, elapsed time : 0.0 (sec)
+
+Final Design Statistics
+    Number of Combinational MCs 	:	1
+    Number of Sequential MCs    	:	5
+    Number of DPs               	:	2
+    Number of Controls          	:	2
+    Number of Status            	:	0
+    Number of SyncCells         	:	0
+    Number of count7cells       	:	0
+    Number of IOs       	:	10
+
+Device Utilization Summary
+    Macrocells                  :	6/32
+    IOs                         :	10/38
+
+
+
+######################################################################
+Placement Timing Summary
+
+The timing summary is based on estimated routing delays after
+placement. For final timing report, please carry out the timing
+analysis after routing.
+======================================================================
+
+
+######################################################################
+                     Clock Summary 
+======================================================================
+Number of clocks: 13
+Clock: CapSense_SampleClk   | Frequency: N/A       | Target:   0.0 MHz
+Clock: CapSense_SampleClk(FFB) | Frequency: N/A       | Target:   0.0 MHz
+Clock: CapSense_SenseClk    | Frequency: N/A       | Target:   0.0 MHz
+Clock: CapSense_SenseClk(FFB) | Frequency: N/A       | Target:   0.0 MHz
+Clock: CyECO                | Frequency: N/A       | Target:  24.0 MHz
+Clock: CyHFCLK              | Frequency: N/A       | Target:  12.0 MHz
+Clock: CyILO                | Frequency: N/A       | Target:   0.0 MHz
+Clock: CyIMO                | Frequency: N/A       | Target:  12.0 MHz
+Clock: CyLFCLK              | Frequency: N/A       | Target:   0.0 MHz
+Clock: CyRouted1            | Frequency: N/A       | Target:  12.0 MHz
+Clock: CySYSCLK             | Frequency: N/A       | Target:  12.0 MHz
+Clock: CyWCO                | Frequency: N/A       | Target:   0.0 MHz
+Clock: PrISM_Clock          | Frequency:  87.5 MHz | Target:   0.1 MHz
+
+======================================================================
+                     End of Clock Summary
+######################################################################
+
+Phase 8
+D2088: Phase 8, elapsed time : 0.0 (sec)
+
+D2054: Placement of the design completed successfully
+
+I2076: Total run-time: 0.2 sec.
+

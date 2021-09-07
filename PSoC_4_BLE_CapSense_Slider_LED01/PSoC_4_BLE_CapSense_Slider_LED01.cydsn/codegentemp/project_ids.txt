@@ -1,6 +1,0 @@
-C:\Users\Jack\Documents\GitHub\senior-project\PSoC_4_BLE_CapSense_Slider_LED01\PSoC_4_BLE_CapSense_Slider_LED01.cydsn\PSoC_4_BLE_CapSense_Slider_LED01.cyprj|1a2c7298-0c2e-4b3a-b8be-0c8306aa3c61
-C:\Program Files (x86)\Cypress\PSoC Creator\4.3\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|0a485eed-5664-4ac5-acd0-6ff08416a8b7
-C:\Users\Jack\Documents\PSoC Creator\4.3\Downloads ( 4.3).cylib\Downloads ( 4.3).cyprj|c0e86eaf-1cc5-4750-bfc1-4d34d3c59f42
-C:\Program Files (x86)\Cypress\PSoC Creator\4.3\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|f7e2e407-558c-4111-b2c2-40ee02a5819c
-C:\Program Files (x86)\Cypress\PSoC Creator\4.3\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|faa53404-7adb-4abc-8ab0-a2564d5086a9
-C:\Program Files (x86)\Cypress\PSoC Creator\4.3\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|7103d564-2984-42b4-8c12-eecf6c197a5d

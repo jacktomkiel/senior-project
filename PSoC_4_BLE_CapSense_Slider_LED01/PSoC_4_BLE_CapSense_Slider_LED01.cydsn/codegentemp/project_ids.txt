@@ -1,6 +1,6 @@
-C:\Program Files (x86)\Cypress\PSoC Creator\4.3\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|247be49d-696b-4c4c-9e48-50cd75c79d98
-C:\Users\Jack\Documents\PSoC Creator\4.3\Downloads ( 4.3).cylib\Downloads ( 4.3).cyprj|d74711ce-a55a-4efb-b2f5-c4eb90b31f14
-C:\Program Files (x86)\Cypress\PSoC Creator\4.3\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|96b6c6b4-6da8-4757-b6ea-f5a2457e9453
-C:\Program Files (x86)\Cypress\PSoC Creator\4.3\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|8872b2c9-b8dc-49a3-838e-32fb4d96fe72
-C:\Program Files (x86)\Cypress\PSoC Creator\4.3\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|03c8428a-e9b6-4ace-839a-9b839545a2ff
-C:\Users\Jack\Documents\PSoC Creator\LED capsense slider\PSoC_4_BLE_CapSense_Slider_LED01\PSoC_4_BLE_CapSense_Slider_LED01.cydsn\PSoC_4_BLE_CapSense_Slider_LED01.cyprj|bcad800e-da6c-4eb3-8e9f-da2e9d2e913c
+C:\Users\Jack\Documents\GitHub\senior-project\PSoC_4_BLE_CapSense_Slider_LED01\PSoC_4_BLE_CapSense_Slider_LED01.cydsn\PSoC_4_BLE_CapSense_Slider_LED01.cyprj|1a2c7298-0c2e-4b3a-b8be-0c8306aa3c61
+C:\Program Files (x86)\Cypress\PSoC Creator\4.3\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|0a485eed-5664-4ac5-acd0-6ff08416a8b7
+C:\Users\Jack\Documents\PSoC Creator\4.3\Downloads ( 4.3).cylib\Downloads ( 4.3).cyprj|c0e86eaf-1cc5-4750-bfc1-4d34d3c59f42
+C:\Program Files (x86)\Cypress\PSoC Creator\4.3\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|f7e2e407-558c-4111-b2c2-40ee02a5819c
+C:\Program Files (x86)\Cypress\PSoC Creator\4.3\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|faa53404-7adb-4abc-8ab0-a2564d5086a9
+C:\Program Files (x86)\Cypress\PSoC Creator\4.3\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|7103d564-2984-42b4-8c12-eecf6c197a5d

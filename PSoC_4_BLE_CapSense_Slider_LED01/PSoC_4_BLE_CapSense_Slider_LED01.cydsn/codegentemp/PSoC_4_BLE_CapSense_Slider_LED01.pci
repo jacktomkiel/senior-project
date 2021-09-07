@@ -1,5 +1,5 @@
 # PSoC_4_BLE_CapSense_Slider_LED01
-# 2021-09-07 21:04:12Z
+# 2021-09-07 22:02:25Z
 
 # IO_0@[IOP=(6)][IoId=(0)] is reserved: KhzXtalEnabled
 dont_use_io iocell 6 0

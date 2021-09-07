@@ -12016,4 +12016,4 @@ i.CyBle_BleSSInterruptHandler
 
 /DISCARD/
  *(.note.GNU-stack)
-OUTPUT(C:\Users\Jack\Documents\PSoC Creator\LED capsense slider\PSoC_4_BLE_CapSense_Slider_LED01\PSoC_4_BLE_CapSense_Slider_LED01.cydsn\CortexM0\ARM_GCC_541\Debug\PSoC_4_BLE_CapSense_Slider_LED01.elf elf32-littlearm)
+OUTPUT(C:\Users\Jack\Documents\GitHub\senior-project\PSoC_4_BLE_CapSense_Slider_LED01\PSoC_4_BLE_CapSense_Slider_LED01.cydsn\CortexM0\ARM_GCC_541\Debug\PSoC_4_BLE_CapSense_Slider_LED01.elf elf32-littlearm)

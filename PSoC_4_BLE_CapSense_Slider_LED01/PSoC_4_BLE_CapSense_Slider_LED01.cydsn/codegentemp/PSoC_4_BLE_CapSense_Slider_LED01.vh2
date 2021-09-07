@@ -2,7 +2,7 @@
 --	Conversion of PSoC_4_BLE_CapSense_Slider_LED01.v to vh2:
 --
 --	Cypress Semiconductor - WARP Version 6.3 IR 41
---	Tue Sep 07 17:04:11 2021
+--	Tue Sep 07 18:02:25 2021
 --
 
 USE cypress.cypress.all;

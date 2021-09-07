@@ -25,7 +25,7 @@
       <Tool Name="postbuild" Command="" Options="" />
     </Toolchain>
   </Toolchains>
-  <Project Name="PSoC_4_BLE_CapSense_Slider_LED01" Path="C:\Users\Jack\Documents\PSoC Creator\LED capsense slider\PSoC_4_BLE_CapSense_Slider_LED01\PSoC_4_BLE_CapSense_Slider_LED01.cydsn" Version="5.70" Type="Normal">
+  <Project Name="PSoC_4_BLE_CapSense_Slider_LED01" Path="C:\Users\Jack\Documents\GitHub\senior-project\PSoC_4_BLE_CapSense_Slider_LED01\PSoC_4_BLE_CapSense_Slider_LED01.cydsn" Version="5.70" Type="Normal">
     <CMSIS_SVD_File>PSoC_4_BLE_CapSense_Slider_LED01.svd</CMSIS_SVD_File>
     <Datasheet />
     <LinkerFiles>
@@ -34,8 +34,8 @@
       <LinkerFile Toolchain="ARM IAR Generic">.\Generated_Source\PSoC4\Cm0Iar.icf</LinkerFile>
     </LinkerFiles>
     <Folders>
-      <Folder BuildType="STRICT" Path="C:\Users\Jack\Documents\PSoC Creator\LED capsense slider\PSoC_4_BLE_CapSense_Slider_LED01\PSoC_4_BLE_CapSense_Slider_LED01.cydsn">
-        <Files Root="C:\Users\Jack\Documents\PSoC Creator\LED capsense slider\PSoC_4_BLE_CapSense_Slider_LED01\PSoC_4_BLE_CapSense_Slider_LED01.cydsn">
+      <Folder BuildType="STRICT" Path="C:\Users\Jack\Documents\GitHub\senior-project\PSoC_4_BLE_CapSense_Slider_LED01\PSoC_4_BLE_CapSense_Slider_LED01.cydsn">
+        <Files Root="C:\Users\Jack\Documents\GitHub\senior-project\PSoC_4_BLE_CapSense_Slider_LED01\PSoC_4_BLE_CapSense_Slider_LED01.cydsn">
           <File BuildType="BUILD" Toolchain="">main.c</File>
           <File BuildType="BUILD" Toolchain="">BLEApplications.c</File>
           <File BuildType="BUILD" Toolchain="">HandleLowPower.c</File>
@@ -45,8 +45,8 @@
           <File BuildType="BUILD" Toolchain="">cyapicallbacks.h</File>
         </Files>
       </Folder>
-      <Folder BuildType="STRICT" Path="C:\Users\Jack\Documents\PSoC Creator\LED capsense slider\PSoC_4_BLE_CapSense_Slider_LED01\PSoC_4_BLE_CapSense_Slider_LED01.cydsn\Generated_Source\PSoC4">
-        <Files Root="C:\Users\Jack\Documents\PSoC Creator\LED capsense slider\PSoC_4_BLE_CapSense_Slider_LED01\PSoC_4_BLE_CapSense_Slider_LED01.cydsn">
+      <Folder BuildType="STRICT" Path="C:\Users\Jack\Documents\GitHub\senior-project\PSoC_4_BLE_CapSense_Slider_LED01\PSoC_4_BLE_CapSense_Slider_LED01.cydsn\Generated_Source\PSoC4">
+        <Files Root="C:\Users\Jack\Documents\GitHub\senior-project\PSoC_4_BLE_CapSense_Slider_LED01\PSoC_4_BLE_CapSense_Slider_LED01.cydsn">
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\cyfitter_cfg.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\cyfitter_cfg.c</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\cymetadata.c</File>
@@ -157,65 +157,65 @@
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\cycodeshareimport.scat</File>
         </Files>
       </Folder>
-      <Folder BuildType="STRICT" Path="C:\Users\Jack\Documents\PSoC Creator\LED capsense slider\PSoC_4_BLE_CapSense_Slider_LED01\PSoC_4_BLE_CapSense_Slider_LED01.cydsn\Export\ARM_GCC_Generic\BLE_v3_50">
-        <Files Root="C:\Users\Jack\Documents\PSoC Creator\LED capsense slider\PSoC_4_BLE_CapSense_Slider_LED01\PSoC_4_BLE_CapSense_Slider_LED01.cydsn">
+      <Folder BuildType="STRICT" Path="C:\Users\Jack\Documents\GitHub\senior-project\PSoC_4_BLE_CapSense_Slider_LED01\PSoC_4_BLE_CapSense_Slider_LED01.cydsn\Export\ARM_GCC_Generic\BLE_v3_50">
+        <Files Root="C:\Users\Jack\Documents\GitHub\senior-project\PSoC_4_BLE_CapSense_Slider_LED01\PSoC_4_BLE_CapSense_Slider_LED01.cydsn">
           <File BuildType="BUILD" Toolchain="ARM GCC Generic">.\Export\ARM_GCC_Generic\BLE_v3_50\gccCyBLEStack_BLE_SOC_PERIPHERAL.a</File>
         </Files>
       </Folder>
-      <Folder BuildType="STRICT" Path="C:\Users\Jack\Documents\PSoC Creator\LED capsense slider\PSoC_4_BLE_CapSense_Slider_LED01\PSoC_4_BLE_CapSense_Slider_LED01.cydsn\Export\ARM_GCC_Generic\CapSense_CSD_P4_v2_60">
-        <Files Root="C:\Users\Jack\Documents\PSoC Creator\LED capsense slider\PSoC_4_BLE_CapSense_Slider_LED01\PSoC_4_BLE_CapSense_Slider_LED01.cydsn">
+      <Folder BuildType="STRICT" Path="C:\Users\Jack\Documents\GitHub\senior-project\PSoC_4_BLE_CapSense_Slider_LED01\PSoC_4_BLE_CapSense_Slider_LED01.cydsn\Export\ARM_GCC_Generic\CapSense_CSD_P4_v2_60">
+        <Files Root="C:\Users\Jack\Documents\GitHub\senior-project\PSoC_4_BLE_CapSense_Slider_LED01\PSoC_4_BLE_CapSense_Slider_LED01.cydsn">
           <File BuildType="BUILD" Toolchain="ARM GCC Generic">.\Export\ARM_GCC_Generic\CapSense_CSD_P4_v2_60\CapsenseP4Library_GCC.a</File>
         </Files>
       </Folder>
-      <Folder BuildType="STRICT" Path="C:\Users\Jack\Documents\PSoC Creator\LED capsense slider\PSoC_4_BLE_CapSense_Slider_LED01\PSoC_4_BLE_CapSense_Slider_LED01.cydsn\Export\ARM_MDK_Generic\BLE_v3_50">
-        <Files Root="C:\Users\Jack\Documents\PSoC Creator\LED capsense slider\PSoC_4_BLE_CapSense_Slider_LED01\PSoC_4_BLE_CapSense_Slider_LED01.cydsn">
+      <Folder BuildType="STRICT" Path="C:\Users\Jack\Documents\GitHub\senior-project\PSoC_4_BLE_CapSense_Slider_LED01\PSoC_4_BLE_CapSense_Slider_LED01.cydsn\Export\ARM_MDK_Generic\BLE_v3_50">
+        <Files Root="C:\Users\Jack\Documents\GitHub\senior-project\PSoC_4_BLE_CapSense_Slider_LED01\PSoC_4_BLE_CapSense_Slider_LED01.cydsn">
           <File BuildType="BUILD" Toolchain="ARM MDK Generic">.\Export\ARM_MDK_Generic\BLE_v3_50\mdkCyBLEStack_BLE_SOC_PERIPHERAL.a</File>
         </Files>
       </Folder>
-      <Folder BuildType="STRICT" Path="C:\Users\Jack\Documents\PSoC Creator\LED capsense slider\PSoC_4_BLE_CapSense_Slider_LED01\PSoC_4_BLE_CapSense_Slider_LED01.cydsn\Export\ARM_MDK_Generic\CapSense_CSD_P4_v2_60">
-        <Files Root="C:\Users\Jack\Documents\PSoC Creator\LED capsense slider\PSoC_4_BLE_CapSense_Slider_LED01\PSoC_4_BLE_CapSense_Slider_LED01.cydsn">
+      <Folder BuildType="STRICT" Path="C:\Users\Jack\Documents\GitHub\senior-project\PSoC_4_BLE_CapSense_Slider_LED01\PSoC_4_BLE_CapSense_Slider_LED01.cydsn\Export\ARM_MDK_Generic\CapSense_CSD_P4_v2_60">
+        <Files Root="C:\Users\Jack\Documents\GitHub\senior-project\PSoC_4_BLE_CapSense_Slider_LED01\PSoC_4_BLE_CapSense_Slider_LED01.cydsn">
           <File BuildType="BUILD" Toolchain="ARM MDK Generic">.\Export\ARM_MDK_Generic\CapSense_CSD_P4_v2_60\CapsenseP4Library_MDK.a</File>
         </Files>
       </Folder>
-      <Folder BuildType="STRICT" Path="C:\Users\Jack\Documents\PSoC Creator\LED capsense slider\PSoC_4_BLE_CapSense_Slider_LED01\PSoC_4_BLE_CapSense_Slider_LED01.cydsn\Export\ARM_IAR_Generic\BLE_v3_50">
-        <Files Root="C:\Users\Jack\Documents\PSoC Creator\LED capsense slider\PSoC_4_BLE_CapSense_Slider_LED01\PSoC_4_BLE_CapSense_Slider_LED01.cydsn">
+      <Folder BuildType="STRICT" Path="C:\Users\Jack\Documents\GitHub\senior-project\PSoC_4_BLE_CapSense_Slider_LED01\PSoC_4_BLE_CapSense_Slider_LED01.cydsn\Export\ARM_IAR_Generic\BLE_v3_50">
+        <Files Root="C:\Users\Jack\Documents\GitHub\senior-project\PSoC_4_BLE_CapSense_Slider_LED01\PSoC_4_BLE_CapSense_Slider_LED01.cydsn">
           <File BuildType="BUILD" Toolchain="ARM IAR Generic">.\Export\ARM_IAR_Generic\BLE_v3_50\gccCyBLEStack_BLE_SOC_PERIPHERAL.a</File>
         </Files>
       </Folder>
-      <Folder BuildType="STRICT" Path="C:\Users\Jack\Documents\PSoC Creator\LED capsense slider\PSoC_4_BLE_CapSense_Slider_LED01\PSoC_4_BLE_CapSense_Slider_LED01.cydsn\Export\ARM_IAR_Generic\CapSense_CSD_P4_v2_60">
-        <Files Root="C:\Users\Jack\Documents\PSoC Creator\LED capsense slider\PSoC_4_BLE_CapSense_Slider_LED01\PSoC_4_BLE_CapSense_Slider_LED01.cydsn">
+      <Folder BuildType="STRICT" Path="C:\Users\Jack\Documents\GitHub\senior-project\PSoC_4_BLE_CapSense_Slider_LED01\PSoC_4_BLE_CapSense_Slider_LED01.cydsn\Export\ARM_IAR_Generic\CapSense_CSD_P4_v2_60">
+        <Files Root="C:\Users\Jack\Documents\GitHub\senior-project\PSoC_4_BLE_CapSense_Slider_LED01\PSoC_4_BLE_CapSense_Slider_LED01.cydsn">
           <File BuildType="BUILD" Toolchain="ARM IAR Generic">.\Export\ARM_IAR_Generic\CapSense_CSD_P4_v2_60\CapsenseP4Library_IAR.a</File>
         </Files>
       </Folder>
       <Folder BuildType="EXCLUDE" Path=".\codegentemp">
-        <Files Root="C:\Users\Jack\Documents\PSoC Creator\LED capsense slider\PSoC_4_BLE_CapSense_Slider_LED01\PSoC_4_BLE_CapSense_Slider_LED01.cydsn" />
+        <Files Root="C:\Users\Jack\Documents\GitHub\senior-project\PSoC_4_BLE_CapSense_Slider_LED01\PSoC_4_BLE_CapSense_Slider_LED01.cydsn" />
       </Folder>
       <Folder BuildType="EXCLUDE" Path=".\ARM_GCC_441">
-        <Files Root="C:\Users\Jack\Documents\PSoC Creator\LED capsense slider\PSoC_4_BLE_CapSense_Slider_LED01\PSoC_4_BLE_CapSense_Slider_LED01.cydsn" />
+        <Files Root="C:\Users\Jack\Documents\GitHub\senior-project\PSoC_4_BLE_CapSense_Slider_LED01\PSoC_4_BLE_CapSense_Slider_LED01.cydsn" />
       </Folder>
       <Folder BuildType="EXCLUDE" Path=".\ARM_GCC_473">
-        <Files Root="C:\Users\Jack\Documents\PSoC Creator\LED capsense slider\PSoC_4_BLE_CapSense_Slider_LED01\PSoC_4_BLE_CapSense_Slider_LED01.cydsn" />
+        <Files Root="C:\Users\Jack\Documents\GitHub\senior-project\PSoC_4_BLE_CapSense_Slider_LED01\PSoC_4_BLE_CapSense_Slider_LED01.cydsn" />
       </Folder>
       <Folder BuildType="EXCLUDE" Path=".\DP8051_Keil_952">
-        <Files Root="C:\Users\Jack\Documents\PSoC Creator\LED capsense slider\PSoC_4_BLE_CapSense_Slider_LED01\PSoC_4_BLE_CapSense_Slider_LED01.cydsn" />
+        <Files Root="C:\Users\Jack\Documents\GitHub\senior-project\PSoC_4_BLE_CapSense_Slider_LED01\PSoC_4_BLE_CapSense_Slider_LED01.cydsn" />
       </Folder>
       <Folder BuildType="EXCLUDE" Path=".\DP8051">
-        <Files Root="C:\Users\Jack\Documents\PSoC Creator\LED capsense slider\PSoC_4_BLE_CapSense_Slider_LED01\PSoC_4_BLE_CapSense_Slider_LED01.cydsn" />
+        <Files Root="C:\Users\Jack\Documents\GitHub\senior-project\PSoC_4_BLE_CapSense_Slider_LED01\PSoC_4_BLE_CapSense_Slider_LED01.cydsn" />
       </Folder>
       <Folder BuildType="EXCLUDE" Path=".\CortexM0">
-        <Files Root="C:\Users\Jack\Documents\PSoC Creator\LED capsense slider\PSoC_4_BLE_CapSense_Slider_LED01\PSoC_4_BLE_CapSense_Slider_LED01.cydsn" />
+        <Files Root="C:\Users\Jack\Documents\GitHub\senior-project\PSoC_4_BLE_CapSense_Slider_LED01\PSoC_4_BLE_CapSense_Slider_LED01.cydsn" />
       </Folder>
       <Folder BuildType="EXCLUDE" Path=".\CortexM0p">
-        <Files Root="C:\Users\Jack\Documents\PSoC Creator\LED capsense slider\PSoC_4_BLE_CapSense_Slider_LED01\PSoC_4_BLE_CapSense_Slider_LED01.cydsn" />
+        <Files Root="C:\Users\Jack\Documents\GitHub\senior-project\PSoC_4_BLE_CapSense_Slider_LED01\PSoC_4_BLE_CapSense_Slider_LED01.cydsn" />
       </Folder>
       <Folder BuildType="EXCLUDE" Path=".\CortexM3">
-        <Files Root="C:\Users\Jack\Documents\PSoC Creator\LED capsense slider\PSoC_4_BLE_CapSense_Slider_LED01\PSoC_4_BLE_CapSense_Slider_LED01.cydsn" />
+        <Files Root="C:\Users\Jack\Documents\GitHub\senior-project\PSoC_4_BLE_CapSense_Slider_LED01\PSoC_4_BLE_CapSense_Slider_LED01.cydsn" />
       </Folder>
       <Folder BuildType="EXCLUDE" Path=".\CortexM4">
-        <Files Root="C:\Users\Jack\Documents\PSoC Creator\LED capsense slider\PSoC_4_BLE_CapSense_Slider_LED01\PSoC_4_BLE_CapSense_Slider_LED01.cydsn" />
+        <Files Root="C:\Users\Jack\Documents\GitHub\senior-project\PSoC_4_BLE_CapSense_Slider_LED01\PSoC_4_BLE_CapSense_Slider_LED01.cydsn" />
       </Folder>
       <Folder BuildType="EXCLUDE" Path=".\CortexM7">
-        <Files Root="C:\Users\Jack\Documents\PSoC Creator\LED capsense slider\PSoC_4_BLE_CapSense_Slider_LED01\PSoC_4_BLE_CapSense_Slider_LED01.cydsn" />
+        <Files Root="C:\Users\Jack\Documents\GitHub\senior-project\PSoC_4_BLE_CapSense_Slider_LED01\PSoC_4_BLE_CapSense_Slider_LED01.cydsn" />
       </Folder>
     </Folders>
   </Project>

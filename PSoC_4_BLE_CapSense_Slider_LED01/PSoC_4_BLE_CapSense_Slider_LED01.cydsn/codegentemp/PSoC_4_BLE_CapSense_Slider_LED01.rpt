@@ -1,13 +1,13 @@
-Loading plugins phase: Elapsed time ==> 0s.085ms
+Loading plugins phase: Elapsed time ==> 0s.084ms
 <CYPRESSTAG name="CyDsfit arguments...">
-cydsfit arguments: -.fdsnotice -.fdswarpdepfile=warp_dependencies.txt -.fdselabdepfile=elab_dependencies.txt -.fdsbldfile=generated_files.txt -.fdsreffile=referenced_files.txt -p C:\Users\Jack\Documents\PSoC Creator\LED capsense slider\PSoC_4_BLE_CapSense_Slider_LED01\PSoC_4_BLE_CapSense_Slider_LED01.cydsn\PSoC_4_BLE_CapSense_Slider_LED01.cyprj -d CY8C4247LQI-BL483 -s C:\Users\Jack\Documents\PSoC Creator\LED capsense slider\PSoC_4_BLE_CapSense_Slider_LED01\PSoC_4_BLE_CapSense_Slider_LED01.cydsn\Generated_Source\PSoC4 -- -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE
+cydsfit arguments: -.fdsnotice -.fdswarpdepfile=warp_dependencies.txt -.fdselabdepfile=elab_dependencies.txt -.fdsbldfile=generated_files.txt -.fdsreffile=referenced_files.txt -p C:\Users\Jack\Documents\GitHub\senior-project\PSoC_4_BLE_CapSense_Slider_LED01\PSoC_4_BLE_CapSense_Slider_LED01.cydsn\PSoC_4_BLE_CapSense_Slider_LED01.cyprj -d CY8C4247LQI-BL483 -s C:\Users\Jack\Documents\GitHub\senior-project\PSoC_4_BLE_CapSense_Slider_LED01\PSoC_4_BLE_CapSense_Slider_LED01.cydsn\Generated_Source\PSoC4 -- -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE
 </CYPRESSTAG>
 <CYPRESSTAG name="Design elaboration results...">
 </CYPRESSTAG>
-Elaboration phase: Elapsed time ==> 1s.231ms
+Elaboration phase: Elapsed time ==> 1s.244ms
 <CYPRESSTAG name="HDL generation results...">
 </CYPRESSTAG>
-HDL generation phase: Elapsed time ==> 0s.021ms
+HDL generation phase: Elapsed time ==> 0s.023ms
 <CYPRESSTAG name="Synthesis results...">
 
      | | | | | | |
@@ -25,23 +25,23 @@ HDL generation phase: Elapsed time ==> 0s.021ms
 ======================================================================
 Compiling:  PSoC_4_BLE_CapSense_Slider_LED01.v
 Program  :   C:\Program Files (x86)\Cypress\PSoC Creator\4.3\PSoC Creator\warp\bin\warp.exe
-Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\Jack\Documents\PSoC Creator\LED capsense slider\PSoC_4_BLE_CapSense_Slider_LED01\PSoC_4_BLE_CapSense_Slider_LED01.cydsn\PSoC_4_BLE_CapSense_Slider_LED01.cyprj -dcpsoc3 PSoC_4_BLE_CapSense_Slider_LED01.v -verilog
+Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\Jack\Documents\GitHub\senior-project\PSoC_4_BLE_CapSense_Slider_LED01\PSoC_4_BLE_CapSense_Slider_LED01.cydsn\PSoC_4_BLE_CapSense_Slider_LED01.cyprj -dcpsoc3 PSoC_4_BLE_CapSense_Slider_LED01.v -verilog
 ======================================================================
 
 ======================================================================
 Compiling:  PSoC_4_BLE_CapSense_Slider_LED01.v
 Program  :   C:\Program Files (x86)\Cypress\PSoC Creator\4.3\PSoC Creator\warp\bin\warp.exe
-Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\Jack\Documents\PSoC Creator\LED capsense slider\PSoC_4_BLE_CapSense_Slider_LED01\PSoC_4_BLE_CapSense_Slider_LED01.cydsn\PSoC_4_BLE_CapSense_Slider_LED01.cyprj -dcpsoc3 PSoC_4_BLE_CapSense_Slider_LED01.v -verilog
+Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\Jack\Documents\GitHub\senior-project\PSoC_4_BLE_CapSense_Slider_LED01\PSoC_4_BLE_CapSense_Slider_LED01.cydsn\PSoC_4_BLE_CapSense_Slider_LED01.cyprj -dcpsoc3 PSoC_4_BLE_CapSense_Slider_LED01.v -verilog
 ======================================================================
 
 ======================================================================
 Compiling:  PSoC_4_BLE_CapSense_Slider_LED01.v
 Program  :   vlogfe
-Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\Jack\Documents\PSoC Creator\LED capsense slider\PSoC_4_BLE_CapSense_Slider_LED01\PSoC_4_BLE_CapSense_Slider_LED01.cydsn\PSoC_4_BLE_CapSense_Slider_LED01.cyprj -dcpsoc3 -verilog PSoC_4_BLE_CapSense_Slider_LED01.v
+Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\Jack\Documents\GitHub\senior-project\PSoC_4_BLE_CapSense_Slider_LED01\PSoC_4_BLE_CapSense_Slider_LED01.cydsn\PSoC_4_BLE_CapSense_Slider_LED01.cyprj -dcpsoc3 -verilog PSoC_4_BLE_CapSense_Slider_LED01.v
 ======================================================================
 
 vlogfe V6.3 IR 41:  Verilog parser
-Tue Sep 07 17:04:11 2021
+Tue Sep 07 18:02:24 2021
 
 
 ======================================================================
@@ -51,7 +51,7 @@ Options  :    -yv2 -q10 PSoC_4_BLE_CapSense_Slider_LED01.v
 ======================================================================
 
 vpp V6.3 IR 41:  Verilog Pre-Processor
-Tue Sep 07 17:04:11 2021
+Tue Sep 07 18:02:24 2021
 
 Flattening file 'C:\Program Files (x86)\Cypress\PSoC Creator\4.3\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\OneTerminal\OneTerminal.v'
 Flattening file 'C:\Program Files (x86)\Cypress\PSoC Creator\4.3\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\ZeroTerminal\ZeroTerminal.v'
@@ -85,11 +85,11 @@ vlogfe:  No errors.
 ======================================================================
 Compiling:  PSoC_4_BLE_CapSense_Slider_LED01.v
 Program  :   tovif
-Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\Jack\Documents\PSoC Creator\LED capsense slider\PSoC_4_BLE_CapSense_Slider_LED01\PSoC_4_BLE_CapSense_Slider_LED01.cydsn\PSoC_4_BLE_CapSense_Slider_LED01.cyprj -dcpsoc3 -verilog PSoC_4_BLE_CapSense_Slider_LED01.v
+Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\Jack\Documents\GitHub\senior-project\PSoC_4_BLE_CapSense_Slider_LED01\PSoC_4_BLE_CapSense_Slider_LED01.cydsn\PSoC_4_BLE_CapSense_Slider_LED01.cyprj -dcpsoc3 -verilog PSoC_4_BLE_CapSense_Slider_LED01.v
 ======================================================================
 
 tovif V6.3 IR 41:  High-level synthesis
-Tue Sep 07 17:04:11 2021
+Tue Sep 07 18:02:24 2021
 
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.3\PSoC Creator\warp\lib\common\std.vhd'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.3\PSoC Creator\warp\lib\common\cypress.vhd'.
@@ -100,9 +100,9 @@ Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.3\PSoC Creator\warp\lib\c
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.3\PSoC Creator\warp\lib\common\stdlogic\mod_cnst.vif'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.3\PSoC Creator\warp\lib\common\stdlogic\mod_mthv.vif'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.3\PSoC Creator\warp\lib\common\stdlogic\mod_genv.vif'.
-Linking 'C:\Users\Jack\Documents\PSoC Creator\LED capsense slider\PSoC_4_BLE_CapSense_Slider_LED01\PSoC_4_BLE_CapSense_Slider_LED01.cydsn\codegentemp\PSoC_4_BLE_CapSense_Slider_LED01.ctl'.
+Linking 'C:\Users\Jack\Documents\GitHub\senior-project\PSoC_4_BLE_CapSense_Slider_LED01\PSoC_4_BLE_CapSense_Slider_LED01.cydsn\codegentemp\PSoC_4_BLE_CapSense_Slider_LED01.ctl'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.3\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\OneTerminal\OneTerminal.v'.
-Linking 'C:\Users\Jack\Documents\PSoC Creator\LED capsense slider\PSoC_4_BLE_CapSense_Slider_LED01\PSoC_4_BLE_CapSense_Slider_LED01.cydsn\codegentemp\PSoC_4_BLE_CapSense_Slider_LED01.v'.
+Linking 'C:\Users\Jack\Documents\GitHub\senior-project\PSoC_4_BLE_CapSense_Slider_LED01\PSoC_4_BLE_CapSense_Slider_LED01.cydsn\codegentemp\PSoC_4_BLE_CapSense_Slider_LED01.v'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.3\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\ZeroTerminal\ZeroTerminal.v'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.3\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\or_v1_0\or_v1_0.v'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.3\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\cy_constant_v1_0\cy_constant_v1_0.v'.
@@ -118,11 +118,11 @@ tovif:  No errors.
 ======================================================================
 Compiling:  PSoC_4_BLE_CapSense_Slider_LED01.v
 Program  :   topld
-Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\Jack\Documents\PSoC Creator\LED capsense slider\PSoC_4_BLE_CapSense_Slider_LED01\PSoC_4_BLE_CapSense_Slider_LED01.cydsn\PSoC_4_BLE_CapSense_Slider_LED01.cyprj -dcpsoc3 -verilog PSoC_4_BLE_CapSense_Slider_LED01.v
+Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\Jack\Documents\GitHub\senior-project\PSoC_4_BLE_CapSense_Slider_LED01\PSoC_4_BLE_CapSense_Slider_LED01.cydsn\PSoC_4_BLE_CapSense_Slider_LED01.cyprj -dcpsoc3 -verilog PSoC_4_BLE_CapSense_Slider_LED01.v
 ======================================================================
 
 topld V6.3 IR 41:  Synthesis and optimization
-Tue Sep 07 17:04:11 2021
+Tue Sep 07 18:02:24 2021
 
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.3\PSoC Creator\warp\lib\common\std.vhd'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.3\PSoC Creator\warp\lib\common\cypress.vhd'.
@@ -133,9 +133,9 @@ Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.3\PSoC Creator\warp\lib\c
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.3\PSoC Creator\warp\lib\common\stdlogic\mod_cnst.vif'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.3\PSoC Creator\warp\lib\common\stdlogic\mod_mthv.vif'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.3\PSoC Creator\warp\lib\common\stdlogic\mod_genv.vif'.
-Linking 'C:\Users\Jack\Documents\PSoC Creator\LED capsense slider\PSoC_4_BLE_CapSense_Slider_LED01\PSoC_4_BLE_CapSense_Slider_LED01.cydsn\codegentemp\PSoC_4_BLE_CapSense_Slider_LED01.ctl'.
+Linking 'C:\Users\Jack\Documents\GitHub\senior-project\PSoC_4_BLE_CapSense_Slider_LED01\PSoC_4_BLE_CapSense_Slider_LED01.cydsn\codegentemp\PSoC_4_BLE_CapSense_Slider_LED01.ctl'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.3\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\OneTerminal\OneTerminal.v'.
-Linking 'C:\Users\Jack\Documents\PSoC Creator\LED capsense slider\PSoC_4_BLE_CapSense_Slider_LED01\PSoC_4_BLE_CapSense_Slider_LED01.cydsn\codegentemp\PSoC_4_BLE_CapSense_Slider_LED01.v'.
+Linking 'C:\Users\Jack\Documents\GitHub\senior-project\PSoC_4_BLE_CapSense_Slider_LED01\PSoC_4_BLE_CapSense_Slider_LED01.cydsn\codegentemp\PSoC_4_BLE_CapSense_Slider_LED01.v'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.3\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\ZeroTerminal\ZeroTerminal.v'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.3\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\or_v1_0\or_v1_0.v'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.3\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\cy_constant_v1_0\cy_constant_v1_0.v'.
@@ -307,13 +307,13 @@ topld:  No errors.
 
 CYPRESS_DIR    : C:\Program Files (x86)\Cypress\PSoC Creator\4.3\PSoC Creator\warp
 Warp Program   : C:\Program Files (x86)\Cypress\PSoC Creator\4.3\PSoC Creator\warp\bin\warp.exe
-Warp Arguments : -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya "-.fftprj=C:\Users\Jack\Documents\PSoC Creator\LED capsense slider\PSoC_4_BLE_CapSense_Slider_LED01\PSoC_4_BLE_CapSense_Slider_LED01.cydsn\PSoC_4_BLE_CapSense_Slider_LED01.cyprj" -dcpsoc3 PSoC_4_BLE_CapSense_Slider_LED01.v -verilog
+Warp Arguments : -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\Jack\Documents\GitHub\senior-project\PSoC_4_BLE_CapSense_Slider_LED01\PSoC_4_BLE_CapSense_Slider_LED01.cydsn\PSoC_4_BLE_CapSense_Slider_LED01.cyprj -dcpsoc3 PSoC_4_BLE_CapSense_Slider_LED01.v -verilog
 </CYPRESSTAG>
-Warp synthesis phase: Elapsed time ==> 0s.446ms
+Warp synthesis phase: Elapsed time ==> 0s.449ms
 <CYPRESSTAG name="Fitter results...">
 <CYPRESSTAG name="Fitter startup details...">
-cyp3fit: V4.3.0.1445, Family: PSoC3, Started at: Tuesday, 07 September 2021 17:04:11
-Options: -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\Jack\Documents\PSoC Creator\LED capsense slider\PSoC_4_BLE_CapSense_Slider_LED01\PSoC_4_BLE_CapSense_Slider_LED01.cydsn\PSoC_4_BLE_CapSense_Slider_LED01.cyprj -d CY8C4247LQI-BL483 PSoC_4_BLE_CapSense_Slider_LED01.v -verilog
+cyp3fit: V4.3.0.1445, Family: PSoC3, Started at: Tuesday, 07 September 2021 18:02:25
+Options: -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\Jack\Documents\GitHub\senior-project\PSoC_4_BLE_CapSense_Slider_LED01\PSoC_4_BLE_CapSense_Slider_LED01.cydsn\PSoC_4_BLE_CapSense_Slider_LED01.cyprj -d CY8C4247LQI-BL483 PSoC_4_BLE_CapSense_Slider_LED01.v -verilog
 </CYPRESSTAG>
 <CYPRESSTAG name="Design parsing">
 Design parsing phase: Elapsed time ==> 0s.005ms
@@ -1057,7 +1057,7 @@ DAC                           :      :      :      :
   8-bit IDAC                  :    1 :    0 :    1 : 100.00 %
 </CYPRESSTAG>
 Technology Mapping: Elapsed time ==> 0s.048ms
-Tech Mapping phase: Elapsed time ==> 0s.061ms
+Tech Mapping phase: Elapsed time ==> 0s.060ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Analog Placement">
 <CYPRESSTAG name="FFB & IO Pre Placement">
@@ -1084,15 +1084,15 @@ ClockGenBlock                       : CLK_GEN_[FFB(CLK_GEN,0)]
 </CYPRESSTAG>
 </CYPRESSTAG>
 <CYPRESSTAG name="Real Analog Placement">
-Elapsed time ==> 0.0842775s
+Elapsed time ==> 0.0817221s
 </CYPRESSTAG>
-Analog Placement phase: Elapsed time ==> 0s.202ms
+Analog Placement phase: Elapsed time ==> 0s.200ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Analog Routing">
 <CYPRESSTAG name="Analog Routing">
-Route success=True, Iterations=1 Elapsed=0.0018218 secs
+Route success=True, Iterations=1 Elapsed=0.0056751 secs
 </CYPRESSTAG>
-Analog Routing phase: Elapsed time ==> 0s.002ms
+Analog Routing phase: Elapsed time ==> 0s.006ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Analog Code Generation">
 ============ Analog Final Answer Routes ============
@@ -1145,7 +1145,7 @@ Map of item to net {
 }
 Mux Info {
 }
-Analog Code Generation phase: Elapsed time ==> 0s.008ms
+Analog Code Generation phase: Elapsed time ==> 0s.009ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Digital Placement">
 <CYPRESSTAG name="Detailed placement messages">
@@ -2068,7 +2068,7 @@ Port | Pin | Fixed |      Type |       Drive Mode |               Name | Connect
 </CYPRESSTAG>
 </CYPRESSTAG>
 Digital component placer commit/Report: Elapsed time ==> 0s.016ms
-Digital Placement phase: Elapsed time ==> 0s.299ms
+Digital Placement phase: Elapsed time ==> 0s.297ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Digital Routing">
 "C:\Program Files (x86)\Cypress\PSoC Creator\4.3\PSoC Creator\bin/sjrouter.exe" --xml-path "C:\Program Files (x86)\Cypress\PSoC Creator\4.3\PSoC Creator\dev\psoc4/3/128k/route_arch-rrg.cydata" --vh2-path "PSoC_4_BLE_CapSense_Slider_LED01_r.vh2" --pcf-path "PSoC_4_BLE_CapSense_Slider_LED01.pco" --des-name "PSoC_4_BLE_CapSense_Slider_LED01" --dsf-path "PSoC_4_BLE_CapSense_Slider_LED01.dsf" --sdc-path "PSoC_4_BLE_CapSense_Slider_LED01.sdc" --lib-path "PSoC_4_BLE_CapSense_Slider_LED01_r.lib"
@@ -2076,7 +2076,7 @@ Routing successful.
 Digital Routing phase: Elapsed time ==> 0s.330ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Bitstream Generation">
-Bitstream Generation phase: Elapsed time ==> 0s.107ms
+Bitstream Generation phase: Elapsed time ==> 0s.106ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Bitstream Verification">
 Bitstream Verification phase: Elapsed time ==> 0s.011ms
@@ -2089,11 +2089,11 @@ Static timing analysis phase: Elapsed time ==> 0s.094ms
 Data reporting phase: Elapsed time ==> 0s.000ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Database update...">
-Design database save phase: Elapsed time ==> 0s.104ms
+Design database save phase: Elapsed time ==> 0s.101ms
 </CYPRESSTAG>
-cydsfit: Elapsed time ==> 1s.255ms
+cydsfit: Elapsed time ==> 1s.252ms
 </CYPRESSTAG>
-Fitter phase: Elapsed time ==> 1s.256ms
-API generation phase: Elapsed time ==> 0s.776ms
-Dependency generation phase: Elapsed time ==> 0s.006ms
+Fitter phase: Elapsed time ==> 1s.252ms
+API generation phase: Elapsed time ==> 0s.746ms
+Dependency generation phase: Elapsed time ==> 0s.005ms
 Cleanup phase: Elapsed time ==> 0s.000ms

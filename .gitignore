@@ -1,1 +1,23 @@
-PSoC_4_BLE_CapSense_Slider_LED01\PSoC_4_BLE_CapSense_Slider_LED01.cydsn\Generated_Source/
+### PSoCCreator ###
+# Modified from https://www.gitignore.io/?templates=psoccreator
+# You may need to add additional directories, e.g. CortexM3/
+
+# Project Settings
+*.cywrk.*
+*.cyprj.*
+
+# Generated Assets and Resources
+Debug/
+Release/
+Export/
+CortexM0/
+codegentemp
+Generated_Source
+*_datasheet.pdf
+*_timing.html
+*.cycdx
+*.cyfit
+*.rpt
+*.svd
+*.log
+*.zip

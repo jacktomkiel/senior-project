@@ -1,0 +1,12 @@
+Last Modified Date & Time: 10/05/2021 15:19:47
+
+PSoC_4_BLE_CapSense_Slider_LED01: PSoC_4_BLE_CapSense_Slider_LED01.cydwr
+	cy_boot [v5.70] to [v6.10]
+	Em_EEPROM_Dynamic [v2.0] to [v2.20]
+	LIN_Dynamic [v4.0] to [v5.0]
+
+PSoC_4_BLE_CapSense_Slider_LED01: TopDesign.cysch
+	BLE [v3.50] to [v3.66]
+	isr_button [v1.70] to [v1.71]
+
+

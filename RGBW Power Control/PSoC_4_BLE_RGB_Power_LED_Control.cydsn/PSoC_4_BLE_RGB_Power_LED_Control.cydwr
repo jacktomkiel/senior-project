@@ -2,8 +2,7 @@
 <DesignWideResources xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://cypress.com/xsd/cydwr">
   <Group key="Component">
     <Group key="v1">
-      <Data key="cy_boot" value="cy_boot_v6_10" />
-      <Data key="cy_dmac" value="cy_dmac_v1_10" />
+      <Data key="cy_boot" value="cy_boot_v5_82" />
       <Data key="cy_lfclk" value="cy_lfclk_v1_20" />
       <Data key="Em_EEPROM_Dynamic" value="Em_EEPROM_Dynamic_v2_20" />
       <Data key="LIN_Dynamic" value="LIN_Dynamic_v5_0" />
@@ -33,13 +32,16 @@
       <Data key="72c9704a-6b3f-47e3-8681-cf60e46a1cb6" value="Pin_2" />
       <Data key="89e69d02-183d-4080-96dd-8b0b09c4b2a8/73b612cd-240c-4d8e-8340-ea28aabf4b11" value="CapSense_Sns" />
       <Data key="89e69d02-183d-4080-96dd-8b0b09c4b2a8/899719c0-e797-4403-a44f-07a66de2cbeb" value="CapSense_Cmod" />
+      <Data key="997958a3-f6ba-4632-b2b9-587dbbb8e22e" value="GREEN_S" />
       <Data key="94467288-781c-449d-8a00-1eac0c6b2b59/5382e105-1382-4a2e-b9f4-3bb2feba71e0" value="SCB_sda" />
       <Data key="94467288-781c-449d-8a00-1eac0c6b2b59/22863ebe-a37b-476f-b252-6e49a8c00b12" value="SCB_scl" />
       <Data key="acddd388-b93b-4713-8fe6-aadabf602bc2" value="RED" />
       <Data key="bda22ab1-4eb8-40a6-b283-d8f51c2988b6" value="BLUE" />
+      <Data key="be0eb4c1-a491-4be5-b90a-b8335097493b" value="BLUE_S" />
       <Data key="dcd87f19-902c-4462-9369-baffbce83266" value="Debug_2" />
+      <Data key="e68af935-4678-4fde-90a8-87dde90685ee" value="LED_ON_OFF_SWITCH" />
       <Data key="e74b9810-9761-4a47-9084-22d6c876c11f" value="Debug_2" />
-      <Data key="e851a3b9-efb8-48be-bbb8-b303b216c393" value="Debug_1" />
+      <Data key="e851a3b9-efb8-48be-bbb8-b303b216c393" value="RED_S" />
       <Data key="ed9d4dd5-7334-4fcc-92b9-981202458088" value="Debug_3" />
       <Data key="f05384b9-ed91-40c9-9c03-8aa8d599b1cb" value="GREEN" />
     </Group>
@@ -3755,6 +3757,11 @@
         <Data key="Port Format" value="4,0" />
       </Group>
     </Group>
+    <Group key="997958a3-f6ba-4632-b2b9-587dbbb8e22e">
+      <Group key="0">
+        <Data key="Port Format" value="3,1" />
+      </Group>
+    </Group>
     <Group key="94467288-781c-449d-8a00-1eac0c6b2b59/5382e105-1382-4a2e-b9f4-3bb2feba71e0">
       <Group key="0">
         <Data key="Port Format" value="3,4" />
@@ -3775,9 +3782,19 @@
         <Data key="Port Format" value="3,7" />
       </Group>
     </Group>
+    <Group key="be0eb4c1-a491-4be5-b90a-b8335097493b">
+      <Group key="0">
+        <Data key="Port Format" value="3,2" />
+      </Group>
+    </Group>
     <Group key="dcd87f19-902c-4462-9369-baffbce83266">
       <Group key="0">
         <Data key="Port Format" value="0,3" />
+      </Group>
+    </Group>
+    <Group key="e68af935-4678-4fde-90a8-87dde90685ee">
+      <Group key="0">
+        <Data key="Port Format" value="3,4" />
       </Group>
     </Group>
     <Group key="e74b9810-9761-4a47-9084-22d6c876c11f">
@@ -3787,7 +3804,7 @@
     </Group>
     <Group key="e851a3b9-efb8-48be-bbb8-b303b216c393">
       <Group key="0">
-        <Data key="Port Format" value="0,0" />
+        <Data key="Port Format" value="3,0" />
       </Group>
     </Group>
     <Group key="ed9d4dd5-7334-4fcc-92b9-981202458088">
@@ -3825,8 +3842,8 @@
     <Data key="CYDEV_TEMPERATURE" value="-40C - 85C" />
     <Data key="CYDEV_USE_BUNDLED_CMSIS" value="True" />
     <Data key="CYDEV_VARIABLE_VDDA" value="True" />
-    <Data key="CYDEV_VDDA" value="3.3" />
-    <Data key="CYDEV_VDDD" value="3.3" />
-    <Data key="CYDEV_VDDR" value="3.3" />
+    <Data key="CYDEV_VDDA" value="5" />
+    <Data key="CYDEV_VDDD" value="5" />
+    <Data key="CYDEV_VDDR" value="5" />
   </Group>
 </DesignWideResources>

@@ -1,0 +1,20 @@
+Last Modified Date & Time: 10/05/2021 18:58:27
+
+PSoC_4_BLE_RGB_Power_LED_Control: PSoC_4_BLE_RGB_Power_LED_Control.cydwr
+	cy_boot [v4.20] to [v5.82]
+	Em_EEPROM_Dynamic [v2.0] to [v2.20]
+	LIN_Dynamic [v4.0] to [v5.0]
+
+PSoC_4_BLE_RGB_Power_LED_Control: TopDesign.cysch
+	BLE [v1.20] to [v3.66]
+	isr_button [v1.70] to [v1.71]
+	BLUE [v2.10] to [v2.20]
+	BLUE_S [v2.10] to [v2.20]
+	GREEN [v2.10] to [v2.20]
+	GREEN_S [v2.10] to [v2.20]
+	LED_ON_OFF_SWITCH [v2.10] to [v2.20]
+	RED [v2.10] to [v2.20]
+	RED_S [v2.10] to [v2.20]
+	User_Button [v2.10] to [v2.20]
+
+

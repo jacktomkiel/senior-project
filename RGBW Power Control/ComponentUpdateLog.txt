@@ -18,3 +18,9 @@ PSoC_4_BLE_RGB_Power_LED_Control: TopDesign.cysch
 	User_Button [v2.10] to [v2.20]
 
 
+Last Modified Date & Time: 11/02/2021 15:36:10
+
+PSoC_4_BLE_RGB_Power_LED_Control: PSoC_4_BLE_RGB_Power_LED_Control.cydwr
+	cy_boot [v5.82] to [v6.10]
+
+
